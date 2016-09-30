@@ -1,0 +1,29 @@
+<?xml version='1.0' standalone='yes' ?>
+<GXML_Root>
+  <AO_6711_Inputs mems='5'>
+    <Physical_Channels type='Tag'></Physical_Channels>
+    <Min_Voltage type='DBL'>0</Min_Voltage>
+    <Max_Voltage type='DBL'>0</Max_Voltage>
+    <Trigger_Source type='Tag'></Trigger_Source>
+    <counter type='Tag'></counter>
+  </AO_6711_Inputs>
+  <HSDIO_6541_Inputs mems='3'>
+    <Resource_Name type='String'></Resource_Name>
+    <Clock_Rate type='DBL'>0</Clock_Rate>
+    <Trigger_Source type='String'></Trigger_Source>
+  </HSDIO_6541_Inputs>
+  <AWG_5421_Inputs mems='4'>
+    <Resource_Name type='String'></Resource_Name>
+    <Trigger_Type type='U16'>0</Trigger_Type>
+    <Trigger_Source type='String'></Trigger_Source>
+    <Sample_Rate type='DBL'>0</Sample_Rate>
+  </AWG_5421_Inputs>
+  <DIGIT_5122_Inputs mems='6'>
+    <Sample_Rate type='DBL'>0</Sample_Rate>
+    <Resource_Name type='String'></Resource_Name>
+    <Channel_Name type='String'></Channel_Name>
+    <Trigger_Source type='String'></Trigger_Source>
+    <Vertical_Range type='DBL'>0</Vertical_Range>
+    <Trigger_Level type='DBL'>0</Trigger_Level>
+  </DIGIT_5122_Inputs>
+</GXML_Root>

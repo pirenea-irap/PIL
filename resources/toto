@@ -1,0 +1,185 @@
+<?xml version='1.0' standalone='yes' ?>
+<GXML_Root>
+  <SPECTRUM mems='6'>
+    <Path_of_the_Day type='Path'>D:\PIRENEA\DATA\2016\data_2016_01_01</Path_of_the_Day>
+    <Spectrum_Name type='String'>2016_01_01_000.A00</Spectrum_Name>
+    <Accumulated type='Bool'>FALSE</Accumulated>
+    <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
+    <Record_Number type='I16'>0</Record_Number>
+    <Quality_Flag type='String'>Optimal</Quality_Flag>
+  </SPECTRUM>
+  <EXPERIMENT_Inputs mems='9'>
+    <User_Name type='String'>Christine JOBLIN</User_Name>
+    <Date type='String'>20/09/2016 15:08:31</Date>
+    <Comment type='String'>No comment</Comment>
+    <Experiment_Steps dim='[2]' type='String'>
+      <Name>Dissociation CID</Name>
+      <Name>Photodissociation</Name>
+    </Experiment_Steps>
+    <Sample_Components dim='[2]' type='String'>
+      <Component>Coronene</Component>
+      <Component>Pyrene</Component>
+    </Sample_Components>
+    <Molecules dim='[2]' type='String'>
+      <Molecule>C12H10</Molecule>
+      <Molecule>C16H10</Molecule>
+    </Molecules>
+    <Laser_1 mems='5'>
+      <Used type='Bool'>TRUE</Used>
+      <Name type='String'>Spectroscopy</Name>
+      <Reference type='String'>Yag</Reference>
+      <Wavelength type='DBL'>1000</Wavelength>
+      <Energy type='DBL'>25</Energy>
+    </Laser_1>
+    <Laser_2 mems='5'>
+      <Used type='Bool'>TRUE</Used>
+      <Name type='String'>Spectroscopy</Name>
+      <Reference type='String'>Yag</Reference>
+      <Wavelength type='DBL'>1000</Wavelength>
+      <Energy type='DBL'>25</Energy>
+    </Laser_2>
+    <Laser_3 mems='5'>
+      <Used type='Bool'>TRUE</Used>
+      <Name type='String'>Spectroscopy</Name>
+      <Reference type='String'>Yag</Reference>
+      <Wavelength type='DBL'>1000</Wavelength>
+      <Energy type='DBL'>25</Energy>
+    </Laser_3>
+  </EXPERIMENT_Inputs>
+  <VOLTAGES_Inputs mems='6'>
+    <Hexa_1 mems='2'>
+      <Used type='Bool'>TRUE</Used>
+      <Voltage type='DBL'>0.1</Voltage>
+    </Hexa_1>
+    <Hexa_2 mems='2'>
+      <Used type='Bool'>TRUE</Used>
+      <Voltage type='DBL'>0.2</Voltage>
+    </Hexa_2>
+    <Hexa_3 mems='2'>
+      <Used type='Bool'>TRUE</Used>
+      <Voltage type='DBL'>0.3</Voltage>
+    </Hexa_3>
+    <Quad_1 mems='2'>
+      <Used type='Bool'>TRUE</Used>
+      <Voltage type='DBL'>1.1</Voltage>
+    </Quad_1>
+    <Quad_2 mems='2'>
+      <Used type='Bool'>TRUE</Used>
+      <Voltage type='DBL'>1.2</Voltage>
+    </Quad_2>
+    <Quad_3 mems='2'>
+      <Used type='Bool'>TRUE</Used>
+      <Voltage type='DBL'>1.3</Voltage>
+    </Quad_3>
+  </VOLTAGES_Inputs>
+  <SEQUENCE_Inputs mems='4'>
+    <TRAPPING_Inputs mems='7'>
+      <Init_Values dim='[4]' type='DBL'>
+        <Numeric>2</Numeric>
+        <Numeric>5</Numeric>
+        <Numeric>5</Numeric>
+        <Numeric>2</Numeric>
+      </Init_Values>
+      <Opening_Values dim='[4]' type='DBL'>
+        <Numeric>0</Numeric>
+        <Numeric>0</Numeric>
+        <Numeric>0</Numeric>
+        <Numeric>0</Numeric>
+      </Opening_Values>
+      <Trapping_Values dim='[4]' type='DBL'>
+        <Numeric>2</Numeric>
+        <Numeric>5</Numeric>
+        <Numeric>5</Numeric>
+        <Numeric>2</Numeric>
+      </Trapping_Values>
+      <Emptying_Values dim='[4]' type='DBL'>
+        <Numeric>-5</Numeric>
+        <Numeric>-5</Numeric>
+        <Numeric>-5</Numeric>
+        <Numeric>-5</Numeric>
+      </Emptying_Values>
+      <Adiabatic_ON type='Bool'>FALSE</Adiabatic_ON>
+      <Adiabatic_Duration type='I32'>0</Adiabatic_Duration>
+      <Adiabatic_Waveforms dim='[4]' type='String'>
+        <String>Adiabatic_None_2_2_2000.bin</String>
+        <String>Adiabatic_Ramp_5_0_2000.bin</String>
+        <String>Adiabatic_DoubleRamp_5_0_2000.bin</String>
+        <String>Adiabatic_RC_2_0_2000.bin</String>
+      </Adiabatic_Waveforms>
+    </TRAPPING_Inputs>
+    <EXCIT_Inputs mems='3'>
+      <Number_of_Excitations type='I32'>1</Number_of_Excitations>
+      <Table_of_Waveforms dim='[0]' type='String'>
+        <String></String>
+      </Table_of_Waveforms>
+      <Script_text type='String'>script ExcitDefault
+    Wait until ScriptTrigger0
+    generate default
+end script</Script_text>
+    </EXCIT_Inputs>
+    <DATA_Inputs mems='5'>
+      <Record_Length type='I32'>8192</Record_Length>
+      <Sample_Rate type='Enum U16' sel='20'>4</Sample_Rate>
+      <Number_of_Acquisitions type='I32'>1</Number_of_Acquisitions>
+      <Type_Of_Data type='Enum U16' sel='I16'>0</Type_Of_Data>
+      <Vertical_Range type='Enum U16' sel='0.2'>0</Vertical_Range>
+    </DATA_Inputs>
+    <TIMING_Inputs mems='5'>
+      <Number_Of_Acquisitions_ type='I16'>1</Number_Of_Acquisitions_>
+      <Number_Of_Accumulations type='I16'>1</Number_Of_Accumulations>
+      <Number_Of_Loops type='I16'>1</Number_Of_Loops>
+      <Table_of_Waveforms dim='[1]' type='String'>
+        <String>default10.bin</String>
+      </Table_of_Waveforms>
+      <Script_text type='String'>script SequenceDefault
+   wait until scriptTrigger0 
+   wait 500
+   generate default10
+   wait 1000
+end script</Script_text>
+    </TIMING_Inputs>
+  </SEQUENCE_Inputs>
+  <SOFTWARE_Inputs mems='15'>
+    <Application_Directory type='Path'>D:\PIRENEA\DATA</Application_Directory>
+    <Resources_Path type='Path'>D:\S.O.F.T.S\LABVIEW\PIL\resources</Resources_Path>
+    <Data_Path type='Path'>D:\PIRENEA\DATA</Data_Path>
+    <XML_Path type='Path'>D:\PIRENEA\DATA</XML_Path>
+    <XML_File_Filter type='String'>*.xml</XML_File_Filter>
+    <Excit_Scripts_Path type='Path'>D:\PIRENEA\EXCIT_SCRIPTS</Excit_Scripts_Path>
+    <Excit_Scripts_File_Filter type='String'>*.txt</Excit_Scripts_File_Filter>
+    <Excit_Waveforms_Path type='Path'>D:\PIRENEA\EXCIT_WFMS</Excit_Waveforms_Path>
+    <Excit_Waveforms_File_Filter type='String'>*.bin</Excit_Waveforms_File_Filter>
+    <Sequence_Scripts_Path type='Path'>D:\PIRENEA\SEQUENCE_SCRIPTS</Sequence_Scripts_Path>
+    <Sequence_Scripts_File_Filter type='String'>*.txt</Sequence_Scripts_File_Filter>
+    <Sequence_Waveforms_Path type='Path'>D:\PIRENEA\SEQUENCE_WFMS</Sequence_Waveforms_Path>
+    <Sequence_Waveforms_File_Filter type='String'>*.bin</Sequence_Waveforms_File_Filter>
+    <Trapping_Waveforms_Path type='Path'>D:\PIRENEA\TRAPPING_WFMS</Trapping_Waveforms_Path>
+    <Trapping_Waveforms_File_Filter type='String'>*.bin</Trapping_Waveforms_File_Filter>
+  </SOFTWARE_Inputs>
+  <AO_6711_Inputs mems='5'>
+    <Physical_Channels type='Tag'>AnalogOutput/ao0:3</Physical_Channels>
+    <Min_Voltage type='DBL'>-10</Min_Voltage>
+    <Max_Voltage type='DBL'>10</Max_Voltage>
+    <Trigger_Source type='Tag'>/AnalogOutput/PFI0</Trigger_Source>
+    <counter type='Tag'>AnalogOutput/ctr0</counter>
+  </AO_6711_Inputs>
+  <HSDIO_6541_Inputs mems='3'>
+    <Resource_Name type='String'>SequencerHSDIO</Resource_Name>
+    <Clock_Rate type='DBL'>1000000</Clock_Rate>
+    <Trigger_Source type='String'>PFI0</Trigger_Source>
+  </HSDIO_6541_Inputs>
+  <AWG_5421_Inputs mems='4'>
+    <Resource_Name type='String'>WaveformGenerator</Resource_Name>
+    <Trigger_Type type='U16'>2</Trigger_Type>
+    <Trigger_Source type='String'>PFI0</Trigger_Source>
+    <Sample_Rate type='DBL'>2E+7</Sample_Rate>
+  </AWG_5421_Inputs>
+  <DIGIT_5122_Inputs mems='6'>
+    <Sample_Rate type='DBL'>1E+7</Sample_Rate>
+    <Resource_Name type='String'>Digitizer</Resource_Name>
+    <Channel_Name type='String'>0</Channel_Name>
+    <Trigger_Source type='String'>VAL_EXTERNAL</Trigger_Source>
+    <Vertical_Range type='DBL'>10</Vertical_Range>
+    <Trigger_Level type='DBL'>3</Trigger_Level>
+  </DIGIT_5122_Inputs>
+</GXML_Root>
