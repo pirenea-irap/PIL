@@ -25,5 +25,3 @@ Filter Lambda c:
 Attenuation: 
 Water Filter: 
 ---------------------
-blabla
-bbfdfd
