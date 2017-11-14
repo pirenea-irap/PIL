@@ -1,0 +1,29 @@
+---CID---
+Gas: 
+Tank Pressure: 
+Chamber Pressure: 
+Excitation Gain: 
+---Reactivity Electron---
+Electron Source: 
+Electron Energy: 
+Production Potential: 
+Decceleration Potential: 
+---Reactivity Gas---
+Gas: 
+Tank Pressure: 
+Chamber Pressure: 
+---Reactivity H Source---
+Gas: 
+Tank Pressure: 
+Filament Voltage: 
+---Reactivity Oven---
+Temperature: 
+Molecule: 
+---Photodissociation Lamp---
+Lamp Type: 
+Filter Lambda c: 
+Attenuation: 
+Water Filter: 
+---------------------
+blabla
+bbfdfd

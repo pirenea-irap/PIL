@@ -1,0 +1,7 @@
+Coronene
+Mixed C-Fe
+Pyrene
+Perylene
+Pentacene
+NaphtalPyrene
+MethylPyrene

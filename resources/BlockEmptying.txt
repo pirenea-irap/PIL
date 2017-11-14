@@ -1,0 +1,8 @@
+   generate FilterOff
+   wait FILTER_TAU
+   generate FilterOffEmptyingStart
+   wait EMPTYING_DURATION
+   generate FilterOffEmptyingStop
+   wait FILTER_TAU
+   generate Zeros
+end script

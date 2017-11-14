@@ -1,0 +1,14 @@
+script SCRIPTNAME
+   wait until scriptTrigger0 
+   wait HSDIO_DELAY
+   generate AutLaserOn
+   wait AUT_LASER_BEGIN
+   generate AutLaserOnFilterOff
+   wait FILTER_TAU
+   wait TRAPPING_DELAY
+   generate AutLaserOnFilterOffTrapStart
+   wait TRAPPING_DURATION
+   generate AutLaserOnFilterOffTrapStop
+   wait FILTER_TAU
+   generate AutLaserOnFilterOn
+   wait AUT_LASER_END

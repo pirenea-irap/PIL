@@ -1,0 +1,8 @@
+Trapping
+Acq1
+Acq2
+Excit1
+Excit2
+Gas1On
+Gas1Off
+Emptying
