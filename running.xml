@@ -11,23 +11,24 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='14'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>20/10/2017 15:18:48.087</Date>
+    <Date type='String'>01/12/2017 16:38:49.952</Date>
     <User_Name type='String'>Pavol JUSKO</User_Name>
-    <Comment type='String'>Test with new OS</Comment>
-    <Experiment_Procedures dim='[1]' type='String'>
+    <Comment type='String'>Test with new David&apos;s interface</Comment>
+    <Experiment_Procedures dim='[3]' type='String'>
+      <Name>Ion Cooling</Name>
+      <Name>Dissociation CID</Name>
       <Name>Photodissociation</Name>
     </Experiment_Procedures>
-    <Chemical_Source type='String'>PAH</Chemical_Source>
+    <Chemical_Source type='String'>Cluster</Chemical_Source>
     <Sample_Components dim='[2]' type='String'>
       <Name>Coronene</Name>
       <Name>Perylene</Name>
     </Sample_Components>
-    <Species dim='[2]' type='String'>
+    <Species dim='[1]' type='String'>
       <Name>Coronene</Name>
-      <Name>MethylPyrene</Name>
     </Species>
     <Laser_1 mems='5'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>Minilite II</Name>
       <Reference type='String'>Yag</Reference>
       <Wavelength type='DBL'>1000</Wavelength>
@@ -55,16 +56,14 @@
       <Energy type='DBL'>0</Energy>
     </Laser_4>
     <Laser_5 mems='5'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>Panther Ex OPO</Name>
       <Reference type='String'>ref</Reference>
       <Wavelength type='DBL'>200</Wavelength>
       <Energy type='DBL'>23</Energy>
     </Laser_5>
-    <Gas dim='[3]' type='String'>
+    <Gas dim='[1]' type='String'>
       <Name>Gas1 Helium</Name>
-      <Name>Gas2 Argon</Name>
-      <Name>Gas3 Krypton</Name>
     </Gas>
   </EXPERIMENT_Inputs>
   <VOLTAGES_Inputs mems='6'>
