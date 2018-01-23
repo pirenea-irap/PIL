@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='14'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>01/12/2017 16:38:49.952</Date>
-    <User_Name type='String'>Pavol JUSKO</User_Name>
-    <Comment type='String'>Test with new David&apos;s interface</Comment>
+    <Date type='String'>23/01/2018 17:15:07.307</Date>
+    <User_Name type='String'>Odile COEUR-JOLY</User_Name>
+    <Comment type='String'>Test with prefix for filenames</Comment>
     <Experiment_Procedures dim='[3]' type='String'>
       <Name>Ion Cooling</Name>
       <Name>Dissociation CID</Name>
@@ -28,7 +28,7 @@
       <Name>Coronene</Name>
     </Species>
     <Laser_1 mems='5'>
-      <Used type='Bool'>FALSE</Used>
+      <Used type='Bool'>TRUE</Used>
       <Name type='String'>Minilite II</Name>
       <Reference type='String'>Yag</Reference>
       <Wavelength type='DBL'>1000</Wavelength>
