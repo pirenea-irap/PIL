@@ -41,8 +41,8 @@
 		</Item>
 		<Item Name="Global_Variables.vi" Type="VI" URL="../Global_Variables.vi"/>
 		<Item Name="PIL.ini" Type="Document" URL="../PIL.ini"/>
-		<Item Name="Test_ICR.vi" Type="VI" URL="../Test_ICR.vi"/>
-		<Item Name="Test_PIL_Main.vi" Type="VI" URL="../Test_PIL_Main.vi"/>
+		<Item Name="PIL_ICR.vi" Type="VI" URL="../PIL_ICR.vi"/>
+		<Item Name="PIL_Main.vi" Type="VI" URL="../PIL_Main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="instr.lib" Type="Folder">
 				<Item Name="niFgen Abort Generation.vi" Type="VI" URL="/&lt;instrlib&gt;/niFgen/niFgen.llb/niFgen Abort Generation.vi"/>
@@ -429,29 +429,29 @@
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/PIL_2017_10_20</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/PIL_2018_01_25</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{163C9F3F-9F83-45B3-8E00-F8DB01A940FA}</Property>
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
 				<Property Name="Bld_supportedLanguage[1]" Type="Str">French</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">2</Property>
-				<Property Name="Bld_version.build" Type="Int">81</Property>
+				<Property Name="Bld_version.build" Type="Int">82</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">PIL.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/PIL_2017_10_20/NI_AB_PROJECTNAME.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/PIL_2018_01_25/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Répertoire de support</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/PIL_2017_10_20/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/PIL_2018_01_25/data</Property>
 				<Property Name="Destination[2].destName" Type="Str">resources</Property>
-				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2017_10_20/resources</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2018_01_25/resources</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Source[0].itemID" Type="Str">{5E71301A-67EC-4A6D-AD33-7793369C0B49}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{5D1E91C5-BCBF-4A6A-98A5-DAD60497AC2B}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Test_PIL_Main.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/PIL_Main.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[2].Container.applyDestination" Type="Bool">true</Property>
