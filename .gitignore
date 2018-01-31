@@ -15,5 +15,5 @@
 *.aliases
 *.lvlps
 
-# PIL
+# PIL application
 running.xml
