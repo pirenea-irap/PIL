@@ -2,22 +2,20 @@
 <GXML_Root>
   <XML_Version type='Version'>1.1</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PIRENEA\DATA\2018\data_2018_01_25</Day_Path>
-    <Spectrum_Name type='String'>P2_2018_01_25_001.A00</Spectrum_Name>
-    <Accumulated type='Bool'>TRUE</Accumulated>
+    <Day_Path type='Path'>D:\PIRENEA\DATA\2018\data_2018_01_31</Day_Path>
+    <Spectrum_Name type='String'>P1_2018_01_31_005.A00</Spectrum_Name>
+    <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
-    <From_a_Set_of type='I16'>2</From_a_Set_of>
+    <From_a_Set_of type='I16'>1</From_a_Set_of>
     <Quality_Flag type='String'>Optimal</Quality_Flag>
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='14'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>30/01/2018 17:20:17.452</Date>
+    <Date type='String'>01/02/2018 12:30:01.093</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test with 4 accums</Comment>
-    <Experiment_Procedures dim='[3]' type='String'>
-      <Name>Ion Cooling</Name>
-      <Name>Dissociation CID</Name>
-      <Name>Photodissociation</Name>
+    <Comment type='String'>Test with 0.3 MB and 2 accums</Comment>
+    <Experiment_Procedures dim='[1]' type='String'>
+      <Name>Spectroscopy OPO</Name>
     </Experiment_Procedures>
     <Chemical_Source type='String'>Cluster</Chemical_Source>
     <Sample_Components dim='[2]' type='String'>
@@ -35,7 +33,7 @@
       <Energy type='DBL'>25</Energy>
     </Laser_1>
     <Laser_2 mems='5'>
-      <Used type='Bool'>FALSE</Used>
+      <Used type='Bool'>TRUE</Used>
       <Name type='String'>Surelite I</Name>
       <Reference type='String'>Yag</Reference>
       <Wavelength type='DBL'>1000</Wavelength>
@@ -129,35 +127,37 @@
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate Excit1Swift150to550a70dur1200fs20end script</Script_Text>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f150p0to550p0a70d1200fs20end script</Script_Text>
     <Table_of_Waveforms dim='[1]' type='String'>
-      <String>Excit1Swift150to550a70dur1200fs20</String>
+      <String>E1Swift0p5f150p0to550p0a70d1200fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>100000</Record_Length>
+    <Record_Length type='I32'>3200000</Record_Length>
     <Sample_Rate type='DBL'>1E+7</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
     <Vertical_Range type='DBL'>0.4</Vertical_Range>
-    <Acquisition_Duration type='DBL'>10</Acquisition_Duration>
+    <Acquisition_Duration type='DBL'>320</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
-    <Number_of_Acquisitions_ type='I16'>2</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>4</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[11]' type='String'>
+    <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
+    <Number_of_Accumulations type='I16'>2</Number_of_Accumulations>
+    <Table_of_Waveforms dim='[13]' type='String'>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
       <String>AutLaserOnFilterOffTrapStart</String>
       <String>AutLaserOnFilterOffTrapStop</String>
       <String>AutLaserOnFilterOn</String>
       <String>AutLaserOff</String>
-      <String>Acq</String>
+      <String>Gas1On</String>
+      <String>Gas1Off</String>
       <String>ExcitAcq</String>
+      <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaFree4sExcitAcq5s
+    <Script_Text type='String'>script PireneaGas2sExcitAcq8s
    wait until scriptTrigger0 
    wait 949940
    generate AutLaserOn
@@ -172,11 +172,14 @@
    generate AutLaserOnFilterOn
    wait 47100
    generate AutLaserOff
-   wait 3950000
-   generate Acq
-   wait 1000000
+   wait 1950000
+   generate Gas1On
+   wait 150000
+   generate Gas1Off
+   wait 5850000
    generate ExcitAcq
    wait 1000000
+   generate FilterOff
    wait 1000
    generate FilterOffEmptyingStart
    wait 1000000
