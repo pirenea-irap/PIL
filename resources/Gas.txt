@@ -1,5 +1,5 @@
-Gas1 Helium
-Gas2 Argon
-Gas3 Krypton
-Gas4 Neon
-Gas5 Xeon
+Helium
+Argon
+Nitrogen
+Hydrogen
+Xeon

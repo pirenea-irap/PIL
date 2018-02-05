@@ -12,3 +12,4 @@ script SCRIPTNAME
    wait FILTER_TAU
    generate AutLaserOnFilterOn
    wait AUT_LASER_END
+   generate AutLaserOff

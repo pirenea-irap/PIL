@@ -1,3 +1,4 @@
+   wait EMPTYING_DELAY
    generate FilterOff
    wait FILTER_TAU
    generate FilterOffEmptyingStart
