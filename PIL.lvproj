@@ -28,6 +28,7 @@
 		<Item Name="documentation" Type="Folder" URL="../documentation">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="icons" Type="Folder"/>
 		<Item Name="resources" Type="Folder" URL="../resources">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
@@ -43,7 +44,6 @@
 		<Item Name="PIL.ini" Type="Document" URL="../PIL.ini"/>
 		<Item Name="PIL_ICR.vi" Type="VI" URL="../PIL_ICR.vi"/>
 		<Item Name="PIL_Main.vi" Type="VI" URL="../PIL_Main.vi"/>
-		<Item Name="PILMain-ConvertImage.ico" Type="Document" URL="/C/Users/pirenea/Downloads/PILMain-ConvertImage.ico"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="instr.lib" Type="Folder">
 				<Item Name="niFgen Abort Generation.vi" Type="VI" URL="/&lt;instrlib&gt;/niFgen/niFgen.llb/niFgen Abort Generation.vi"/>
@@ -396,7 +396,6 @@
 				<Item Name="VerQueryValue.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/fileVersionInfo.llb/VerQueryValue.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="DIGIT_5122_Write_Data.vi" Type="VI" URL="../subVIs/ICR/DIGIT_5122_Write_Data.vi"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -430,27 +429,27 @@
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/PIL_2018_02_05</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/PIL_2018_02_06</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{163C9F3F-9F83-45B3-8E00-F8DB01A940FA}</Property>
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
 				<Property Name="Bld_supportedLanguage[1]" Type="Str">French</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">2</Property>
-				<Property Name="Bld_version.build" Type="Int">88</Property>
+				<Property Name="Bld_version.build" Type="Int">90</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">PIL.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/PIL_2018_02_05/NI_AB_PROJECTNAME.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/PIL_2018_02_06/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Répertoire de support</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/PIL_2018_02_05/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/PIL_2018_02_06/data</Property>
 				<Property Name="Destination[2].destName" Type="Str">resources</Property>
-				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2018_02_05/resources</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2018_02_06/resources</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/PILMain-ConvertImage.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{1FB683F6-0E88-4479-BFAE-4EDE5A7840F0}</Property>
+				<Property Name="Exe_iconItemID" Type="Ref"></Property>
+				<Property Name="Source[0].itemID" Type="Str">{E10C158C-24E1-48BB-B5F9-A78854D7A5CD}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/PIL_Main.vi</Property>
