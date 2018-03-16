@@ -11,13 +11,13 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>16/03/2018 14:02:01.742</Date>
+    <Date type='String'>16/03/2018 15:11:21.876</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>test new directory for last.xml</Comment>
+    <Comment type='String'>test if new directories are OK.</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
-    <Chemical_Source type='String'>Other</Chemical_Source>
+    <Chemical_Source type='String'>PAH</Chemical_Source>
     <Sample_Components dim='[1]' type='String'>
       <Name>Other</Name>
     </Sample_Components>
