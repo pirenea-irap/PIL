@@ -3,7 +3,7 @@
   <XML_Version type='Version'>1.1</XML_Version>
   <SPECTRUM mems='6'>
     <Day_Path type='Path'>D:\PIRENEA\DATA\2018\data_2018_03_13</Day_Path>
-    <Spectrum_Name type='String'>P1_2018_03_13_034.A00</Spectrum_Name>
+    <Spectrum_Name type='String'>P1_2018_03_13_021.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
@@ -11,18 +11,18 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>13/03/2018 15:28:22.164</Date>
+    <Date type='String'>16/03/2018 14:02:01.742</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>test Eject2sGas2sExcitAcq8s</Comment>
+    <Comment type='String'>test new directory for last.xml</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
-      <Name>Ion Cooling</Name>
+      <Name>Other</Name>
     </Experiment_Procedures>
-    <Chemical_Source type='String'>PAH</Chemical_Source>
+    <Chemical_Source type='String'>Other</Chemical_Source>
     <Sample_Components dim='[1]' type='String'>
-      <Name>Coronene</Name>
+      <Name>Other</Name>
     </Sample_Components>
     <Species dim='[1]' type='String'>
-      <Name>Coronene</Name>
+      <Name>Other</Name>
     </Species>
     <Laser_1 mems='4'>
       <Used type='Bool'>TRUE</Used>
@@ -68,7 +68,7 @@
     </Lamp_2>
     <Gas_1 mems='3'>
       <Used type='Bool'>FALSE</Used>
-      <Name type='String'>Xeon</Name>
+      <Name type='String'>Helium</Name>
       <Pressure type='DBL'>100</Pressure>
     </Gas_1>
     <Gas_2 mems='3'>
@@ -154,40 +154,36 @@
     </Adiabatic_Waveforms>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
-    <Number_of_Excitations type='I32'>2</Number_of_Excitations>
-    <Script_Text type='String'>script  excit2wfm    wait until scriptTrigger0    generate E1TwoSwift0p5f205p0to255p0and256p5to306p2a18d10000fs20    wait until scriptTrigger0    generate E2Swift0p5f150p0to550p0a70d1200fs20end script</Script_Text>
-    <Table_of_Waveforms dim='[2]' type='String'>
-      <String>E1TwoSwift0p5f205p0to255p0and256p5to306p2a18d10000fs20</String>
-      <String>E2Swift0p5f150p0to550p0a70d1200fs20</String>
+    <Number_of_Excitations type='I32'>1</Number_of_Excitations>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f150p0to550p0a70d1200fs10end script</Script_Text>
+    <Table_of_Waveforms dim='[1]' type='String'>
+      <String>E1Swift0p5f150p0to550p0a70d1200fs10</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>524000</Record_Length>
-    <Sample_Rate type='DBL'>2000000</Sample_Rate>
+    <Record_Length type='I32'>500000</Record_Length>
+    <Sample_Rate type='DBL'>5000000</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
     <Vertical_Range type='DBL'>0.4</Vertical_Range>
-    <Acquisition_Duration type='DBL'>262</Acquisition_Duration>
+    <Acquisition_Duration type='DBL'>100</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[14]' type='String'>
+    <Table_of_Waveforms dim='[11]' type='String'>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
       <String>AutLaserOnFilterOffTrapStart</String>
       <String>AutLaserOnFilterOffTrapStop</String>
       <String>AutLaserOnFilterOn</String>
       <String>AutLaserOff</String>
-      <String>Excit</String>
-      <String>Gas1On</String>
-      <String>GasOff</String>
       <String>ExcitAcq</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaZ1Eject2sGas2sExcitAcq8s
+    <Script_Text type='String'>script PireneaExcitAcq4s
    wait until scriptTrigger0 
    wait 949940
    generate AutLaserOn
@@ -202,13 +198,7 @@
    generate AutLaserOnFilterOn
    wait 47100
    generate AutLaserOff
-   wait 1950000
-   generate Excit
-   wait 50000
-   generate Gas1On
-   wait 150000
-   generate GasOff
-   wait 5800000
+   wait 3950000
    generate ExcitAcq
    wait 1000000
    generate FilterOff
@@ -231,16 +221,16 @@ end script</Script_Text>
     <Data_Path type='Path'>D:\PIRENEA\DATA</Data_Path>
     <XML_Path type='Path'>D:\PIRENEA\DATA</XML_Path>
     <XML_File_Filter type='String'>*.xml</XML_File_Filter>
-    <XML_Saved_Path type='Path'>D:\PIRENEA\DATA\SAVED</XML_Saved_Path>
-    <Excit_Scripts_Path type='Path'>D:\PIRENEA\EXCIT_SCRIPTS</Excit_Scripts_Path>
+    <XML_Saved_Path type='Path'>D:\PIRENEA\SAVED_XML</XML_Saved_Path>
+    <Excit_Scripts_Path type='Path'>D:\PIRENEA\TECHNICAL\EXCIT_SCRIPTS</Excit_Scripts_Path>
     <Excit_Scripts_File_Filter type='String'>*.txt</Excit_Scripts_File_Filter>
-    <Excit_Waveforms_Path type='Path'>D:\PIRENEA\EXCIT_WFMS</Excit_Waveforms_Path>
+    <Excit_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\EXCIT_WFMS</Excit_Waveforms_Path>
     <Excit_Waveforms_File_Filter type='String'>*.bin</Excit_Waveforms_File_Filter>
-    <Timing_Scripts_Path type='Path'>D:\PIRENEA\TIMING_SCRIPTS</Timing_Scripts_Path>
+    <Timing_Scripts_Path type='Path'>D:\PIRENEA\TECHNICAL\TIMING_SCRIPTS</Timing_Scripts_Path>
     <Timing_Scripts_File_Filter type='String'>*.txt</Timing_Scripts_File_Filter>
-    <Timing_Waveforms_Path type='Path'>D:\PIRENEA\TIMING_WFMS</Timing_Waveforms_Path>
+    <Timing_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\TIMING_WFMS</Timing_Waveforms_Path>
     <Timing_Waveforms_File_Filter type='String'>*.bin</Timing_Waveforms_File_Filter>
-    <Trapping_Waveforms_Path type='Path'>D:\PIRENEA\TRAPPING_WFMS</Trapping_Waveforms_Path>
+    <Trapping_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\TRAPPING_WFMS</Trapping_Waveforms_Path>
     <Trapping_Waveforms_File_Filter type='String'>*.bin</Trapping_Waveforms_File_Filter>
   </SOFTWARE_Inputs>
   <AO_6711_Inputs mems='5'>
