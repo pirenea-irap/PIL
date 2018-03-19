@@ -2,8 +2,8 @@
 <GXML_Root>
   <XML_Version type='Version'>1.1</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PIRENEA\DATA\2018\data_2018_03_13</Day_Path>
-    <Spectrum_Name type='String'>P1_2018_03_13_021.A00</Spectrum_Name>
+    <Day_Path type='Path'>D:\PIRENEA\DATA\2018\data_2018_03_23</Day_Path>
+    <Spectrum_Name type='String'>P1_2018_03_23_026.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>16/03/2018 15:11:21.876</Date>
+    <Date type='String'>26/03/2018 12:14:20.328</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>test if new directories are OK.</Comment>
+    <Comment type='String'>test shutters</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -155,9 +155,9 @@
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f150p0to550p0a70d1200fs10end script</Script_Text>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f150p0to550p0a70d1200fs20end script</Script_Text>
     <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1Swift0p5f150p0to550p0a70d1200fs10</String>
+      <String>E1Swift0p5f150p0to550p0a70d1200fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
@@ -170,20 +170,26 @@
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[11]' type='String'>
+    <Table_of_Waveforms dim='[17]' type='String'>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
       <String>AutLaserOnFilterOffTrapStart</String>
       <String>AutLaserOnFilterOffTrapStop</String>
       <String>AutLaserOnFilterOn</String>
       <String>AutLaserOff</String>
+      <String>Laser1On</String>
+      <String>LaserOff</String>
+      <String>Laser2On</String>
+      <String>LaserOff</String>
+      <String>Laser3On</String>
+      <String>LaserOff</String>
       <String>ExcitAcq</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaExcitAcq4s
+    <Script_Text type='String'>script PireneaENGTestShutters
    wait until scriptTrigger0 
    wait 949940
    generate AutLaserOn
@@ -198,9 +204,27 @@
    generate AutLaserOnFilterOn
    wait 47100
    generate AutLaserOff
-   wait 3950000
+   wait 100000
+   repeat 5
+      generate Laser1On
+      wait 100000
+      generate LaserOff
+      wait 100000
+   end repeat
+   repeat 5
+      generate Laser2On
+      wait 100000
+      generate LaserOff
+      wait 100000
+   end repeat
+   repeat 5
+      generate Laser3On
+      wait 100000
+      generate LaserOff
+      wait 100000
+   end repeat
    generate ExcitAcq
-   wait 1000000
+   wait 1000
    generate FilterOff
    wait 1000
    generate FilterOffEmptyingStart
