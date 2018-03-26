@@ -438,7 +438,7 @@
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
 				<Property Name="Bld_supportedLanguage[1]" Type="Str">French</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">2</Property>
-				<Property Name="Bld_version.build" Type="Int">96</Property>
+				<Property Name="Bld_version.build" Type="Int">98</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">PIL.exe</Property>
@@ -450,7 +450,7 @@
 				<Property Name="Destination[2].destName" Type="Str">resources</Property>
 				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2018_03_26/resources</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Source[0].itemID" Type="Str">{C354D2EE-BB27-4349-AD77-CE1833CDAB4F}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{163B9BFB-A3E2-4605-A1BD-EFD8EE80601C}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/PIL_Main.vi</Property>
