@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>26/03/2018 18:17:24.297</Date>
+    <Date type='String'>29/03/2018 17:32:21.847</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>test timer restart</Comment>
+    <Comment type='String'>test adiabatic</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -144,13 +144,13 @@
       <Numeric>-10</Numeric>
       <Numeric>-10</Numeric>
     </Emptying_Values>
-    <Adiabatic_ON type='Bool'>FALSE</Adiabatic_ON>
-    <Adiabatic_Duration type='I32'>0</Adiabatic_Duration>
+    <Adiabatic_ON type='Bool'>TRUE</Adiabatic_ON>
+    <Adiabatic_Duration type='I32'>200</Adiabatic_Duration>
     <Adiabatic_Waveforms dim='[4]' type='String'>
       <String>Adiabatic_None_2_2_2000</String>
-      <String>Adiabatic_Ramp_9_0_2000</String>
       <String>Adiabatic_DoubleRamp_9_0_2000</String>
-      <String>Adiabatic_RC_2_0_2000</String>
+      <String>Adiabatic_None_2_2_2000</String>
+      <String>Adiabatic_None_9_9_2000</String>
     </Adiabatic_Waveforms>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
@@ -161,16 +161,17 @@
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>500000</Record_Length>
-    <Sample_Rate type='DBL'>5000000</Sample_Rate>
+    <Record_Length type='I32'>1000000</Record_Length>
+    <Sample_Rate type='DBL'>1E+7</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
     <Vertical_Range type='DBL'>0.4</Vertical_Range>
     <Acquisition_Duration type='DBL'>100</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>4</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[15]' type='String'>
+    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
+    <Table_of_Waveforms dim='[12]' type='String'>
+      <String>Adiabatic10FilterOff</String>
       <String>AutLaserOff</String>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
@@ -181,13 +182,9 @@
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
-      <String>Laser2On</String>
-      <String>Laser3On</String>
-      <String>Laser8On</String>
-      <String>LaserOff</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaENGTestShutters
+    <Script_Text type='String'>script ZAdiabatic1sduring200msExcitAcq4s
    wait until scriptTrigger0 
    wait 949940
    generate AutLaserOn
@@ -202,27 +199,14 @@
    generate AutLaserOnFilterOn
    wait 47100
    generate AutLaserOff
-   wait 100000
-   repeat 5
-      generate Laser8On
-      wait 100000
-      generate LaserOff
-      wait 100000
+   wait 950000
+   repeat 2000
+      generate Adiabatic10FilterOff
+      wait 90
    end repeat
-   repeat 5
-      generate Laser2On
-      wait 100000
-      generate LaserOff
-      wait 100000
-   end repeat
-   repeat 5
-      generate Laser3On
-      wait 100000
-      generate LaserOff
-      wait 100000
-   end repeat
+   wait 2800000
    generate ExcitAcq
-   wait 1000
+   wait 1000000
    generate FilterOff
    wait 1000
    generate FilterOffEmptyingStart
