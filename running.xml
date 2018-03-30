@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>29/03/2018 17:32:21.847</Date>
+    <Date type='String'>30/03/2018 14:36:08.142</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>test adiabatic</Comment>
+    <Comment type='String'>test excitations</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -26,7 +26,7 @@
     </Species>
     <Laser_1 mems='4'>
       <Used type='Bool'>TRUE</Used>
-      <Name type='String'>Surelite I</Name>
+      <Name type='String'>Ablation Surelite I</Name>
       <Wavelength type='DBL'>1000</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_1>
@@ -38,19 +38,19 @@
     </Laser_2>
     <Laser_3 mems='4'>
       <Used type='Bool'>FALSE</Used>
-      <Name type='String'>Surelite III</Name>
+      <Name type='String'>Panther Ex OPO</Name>
       <Wavelength type='DBL'>1000</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_3>
     <Laser_4 mems='4'>
       <Used type='Bool'>FALSE</Used>
-      <Name type='String'>Brillant B</Name>
+      <Name type='String'>Surelite III</Name>
       <Wavelength type='DBL'>2000</Wavelength>
       <Energy type='DBL'>0</Energy>
     </Laser_4>
     <Laser_5 mems='4'>
       <Used type='Bool'>FALSE</Used>
-      <Name type='String'>Panther Ex OPO</Name>
+      <Name type='String'>Brillant B</Name>
       <Wavelength type='DBL'>200</Wavelength>
       <Energy type='DBL'>23</Energy>
     </Laser_5>
@@ -62,7 +62,7 @@
     </Lamp_1>
     <Lamp_2 mems='4'>
       <Used type='Bool'>FALSE</Used>
-      <Name type='String'>PX Lamp</Name>
+      <Name type='String'>X Lamp</Name>
       <Wavelength type='DBL'>200</Wavelength>
       <Attenuation type='DBL'>-5</Attenuation>
     </Lamp_2>
@@ -144,13 +144,13 @@
       <Numeric>-10</Numeric>
       <Numeric>-10</Numeric>
     </Emptying_Values>
-    <Adiabatic_ON type='Bool'>TRUE</Adiabatic_ON>
+    <Adiabatic_ON type='Bool'>FALSE</Adiabatic_ON>
     <Adiabatic_Duration type='I32'>200</Adiabatic_Duration>
     <Adiabatic_Waveforms dim='[4]' type='String'>
       <String>Adiabatic_None_2_2_2000</String>
-      <String>Adiabatic_DoubleRamp_9_0_2000</String>
+      <String>Adiabatic_RC_9_0_2000</String>
       <String>Adiabatic_None_2_2_2000</String>
-      <String>Adiabatic_None_9_9_2000</String>
+      <String>Adiabatic_RC_9_0_2000</String>
     </Adiabatic_Waveforms>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
@@ -169,9 +169,8 @@
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[12]' type='String'>
-      <String>Adiabatic10FilterOff</String>
+    <Number_of_Accumulations type='I16'>4</Number_of_Accumulations>
+    <Table_of_Waveforms dim='[11]' type='String'>
       <String>AutLaserOff</String>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
@@ -184,7 +183,7 @@
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script ZAdiabatic1sduring200msExcitAcq4s
+    <Script_Text type='String'>script PireneaExcitAcq1min
    wait until scriptTrigger0 
    wait 949940
    generate AutLaserOn
@@ -199,16 +198,11 @@
    generate AutLaserOnFilterOn
    wait 47100
    generate AutLaserOff
-   wait 950000
-   repeat 2000
-      generate Adiabatic10FilterOff
-      wait 90
-   end repeat
-   wait 2800000
+   wait 59950000
    generate ExcitAcq
-   wait 1000000
+   wait 10000000
    generate FilterOff
-   wait 1000
+   wait 2000
    generate FilterOffEmptyingStart
    wait 1000000
    generate FilterOffEmptyingStop
