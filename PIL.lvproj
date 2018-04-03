@@ -398,6 +398,7 @@
 				<Item Name="VerQueryValue.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/fileVersionInfo.llb/VerQueryValue.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
+			<Item Name="EXCIT_Waveforms_Table.ctl" Type="VI" URL="../controls/EXCIT_Waveforms_Table.ctl"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>

@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <GXML_Root>
-  <XML_Version type='Version'>1.1</XML_Version>
+  <XML_Version type='Version'>1.2</XML_Version>
   <SPECTRUM mems='6'>
     <Day_Path type='Path'>D:\PIRENEA\DATA\2016\data_2016_01_01</Day_Path>
     <Spectrum_Name type='String'>2016_01_01_000.A00</Spectrum_Name>
@@ -9,9 +9,9 @@
     <From_a_Set_of type='I16'>1</From_a_Set_of>
     <Quality_Flag type='String'>Optimal</Quality_Flag>
   </SPECTRUM>
-  <EXPERIMENT_Inputs mems='14'>
+  <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>20/06/2017 15:53:02</Date>
+    <Date type='String'>03/04/2018 21:17:00</Date>
     <User_Name type='String'>Christine JOBLIN</User_Name>
     <Comment type='String'>No comment</Comment>
     <Experiment_Procedures dim='[2]' type='String'>
@@ -27,45 +27,73 @@
       <Name>Coronene</Name>
       <Name>Mixed C-Fe</Name>
     </Species>
-    <Laser_1 mems='5'>
+    <Laser_1 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Spectroscopy</Name>
-      <Reference type='String'>Yag</Reference>
       <Wavelength type='DBL'>1000</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_1>
-    <Laser_2 mems='5'>
+    <Laser_2 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Spectroscopy</Name>
-      <Reference type='String'>Yag</Reference>
       <Wavelength type='DBL'>1000</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_2>
-    <Laser_3 mems='5'>
+    <Laser_3 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Spectroscopy</Name>
-      <Reference type='String'>Yag</Reference>
       <Wavelength type='DBL'>1000</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_3>
-    <Laser_4 mems='5'>
+    <Laser_4 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Spectroscopy</Name>
-      <Reference type='String'>Yag</Reference>
       <Wavelength type='DBL'>1000</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_4>
-    <Laser_5 mems='5'>
+    <Laser_5 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Spectroscopy</Name>
-      <Reference type='String'>Yag</Reference>
       <Wavelength type='DBL'>1000</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_5>
-    <Gas dim='[2]' type='String'>
-      <Name>Gas1 Helium</Name>
-      <Name>Gas2 Argon</Name>
-    </Gas>
+    <Lamp_1 mems='4'>
+      <Used type='Bool'>FALSE</Used>
+      <Name type='String'>UV Lamp</Name>
+      <Wavelength type='DBL'>1000</Wavelength>
+      <Attenuation type='DBL'>25</Attenuation>
+    </Lamp_1>
+    <Lamp_2 mems='4'>
+      <Used type='Bool'>FALSE</Used>
+      <Name type='String'>UV Lamp</Name>
+      <Wavelength type='DBL'>1000</Wavelength>
+      <Attenuation type='DBL'>25</Attenuation>
+    </Lamp_2>
+    <Gas_1 mems='3'>
+      <Used type='Bool'>FALSE</Used>
+      <Name type='String'>Spectroscopy</Name>
+      <Pressure type='DBL'>1000</Pressure>
+    </Gas_1>
+    <Gas_2 mems='3'>
+      <Used type='Bool'>FALSE</Used>
+      <Name type='String'>Spectroscopy</Name>
+      <Pressure type='DBL'>1000</Pressure>
+    </Gas_2>
+    <Gas_3 mems='3'>
+      <Used type='Bool'>FALSE</Used>
+      <Name type='String'>Spectroscopy</Name>
+      <Pressure type='DBL'>1000</Pressure>
+    </Gas_3>
+    <Gas_4 mems='3'>
+      <Used type='Bool'>FALSE</Used>
+      <Name type='String'>Spectroscopy</Name>
+      <Pressure type='DBL'>1000</Pressure>
+    </Gas_4>
+    <Gas_5 mems='3'>
+      <Used type='Bool'>FALSE</Used>
+      <Name type='String'>Spectroscopy</Name>
+      <Pressure type='DBL'>1000</Pressure>
+    </Gas_5>
   </EXPERIMENT_Inputs>
   <VOLTAGES_Inputs mems='6'>
     <Hexa_1 mems='2'>
@@ -170,15 +198,15 @@ end script</Script_Text>
     <XML_Path type='Path'>D:\PIRENEA\DATA</XML_Path>
     <XML_File_Filter type='String'>*.xml</XML_File_Filter>
     <XML_Saved_Path type='Path'>D:\PIRENEA\DATA\SAVED</XML_Saved_Path>
-    <Excit_Scripts_Path type='Path'>D:\PIRENEA\EXCIT_SCRIPTS</Excit_Scripts_Path>
+    <Excit_Scripts_Path type='Path'>D:\PIRENEA\TECHNICAL\EXCIT_SCRIPTS</Excit_Scripts_Path>
     <Excit_Scripts_File_Filter type='String'>*.txt</Excit_Scripts_File_Filter>
-    <Excit_Waveforms_Path type='Path'>D:\PIRENEA\EXCIT_WFMS</Excit_Waveforms_Path>
+    <Excit_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\EXCIT_WFMS</Excit_Waveforms_Path>
     <Excit_Waveforms_File_Filter type='String'>*.bin</Excit_Waveforms_File_Filter>
-    <Timing_Scripts_Path type='Path'>D:\PIRENEA\TIMING_SCRIPTS</Timing_Scripts_Path>
+    <Timing_Scripts_Path type='Path'>D:\PIRENEA\TECHNICAL\TIMING_SCRIPTS</Timing_Scripts_Path>
     <Timing_Scripts_File_Filter type='String'>*.txt</Timing_Scripts_File_Filter>
-    <Timing_Waveforms_Path type='Path'>D:\PIRENEA\TIMING_WFMS</Timing_Waveforms_Path>
+    <Timing_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\TIMING_WFMS</Timing_Waveforms_Path>
     <Timing_Waveforms_File_Filter type='String'>*.bin</Timing_Waveforms_File_Filter>
-    <Trapping_Waveforms_Path type='Path'>D:\PIRENEA\TRAPPING_WFMS</Trapping_Waveforms_Path>
+    <Trapping_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\TRAPPING_WFMS</Trapping_Waveforms_Path>
     <Trapping_Waveforms_File_Filter type='String'>*.bin</Trapping_Waveforms_File_Filter>
   </SOFTWARE_Inputs>
   <AO_6711_Inputs mems='5'>
@@ -209,4 +237,22 @@ end script</Script_Text>
     <Clock_Rate type='DBL'>1000000</Clock_Rate>
     <Trigger_Source type='String'>PFI0</Trigger_Source>
   </HSDIO_6541_Inputs>
+  <EXCIT_Waveforms_Table mems='4'>
+    <Number_of_Excits type='U16'>0</Number_of_Excits>
+    <Number_of_Ejects type='U16'>0</Number_of_Ejects>
+    <Sampling_Frequency type='DBL'>0</Sampling_Frequency>
+    <Waveforms_Table dim='[1,11]' type='String'>
+      <String>Excit1</String>
+      <String>name</String>
+      <String>Swift</String>
+      <String>0.5</String>
+      <String>1200</String>
+      <String>70</String>
+      <String>150</String>
+      <String>550</String>
+      <String>0</String>
+      <String>0</String>
+      <String>0</String>
+    </Waveforms_Table>
+  </EXCIT_Waveforms_Table>
 </GXML_Root>

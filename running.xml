@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <GXML_Root>
-  <XML_Version type='Version'>1.1</XML_Version>
+  <XML_Version type='Version'>1.2</XML_Version>
   <SPECTRUM mems='6'>
     <Day_Path type='Path'>D:\PIRENEA\DATA\2018\data_2018_03_23</Day_Path>
     <Spectrum_Name type='String'>P1_2018_03_23_026.A00</Spectrum_Name>
@@ -11,7 +11,7 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>30/03/2018 14:36:08.142</Date>
+    <Date type='String'>03/04/2018 23:10:14.286</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>test excitations</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
@@ -154,10 +154,11 @@
     </Adiabatic_Waveforms>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
-    <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f150p0to550p0a70d1200fs20end script</Script_Text>
-    <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1Swift0p5f150p0to550p0a70d1200fs20</String>
+    <Number_of_Excitations type='I32'>2</Number_of_Excitations>
+    <Script_Text type='String'>script  excit2wfm    wait until scriptTrigger0    generate E1Swift0p5f150p0to350p0a70d1200fs20    wait until scriptTrigger0    generate E2Swift0p5f150p0to350p0a70d1200fs20end script</Script_Text>
+    <Table_of_Waveforms dim='[2]' type='String'>
+      <String>E1Swift0p5f150p0to350p0a70d1200fs20</String>
+      <String>E2Swift0p5f150p0to350p0a70d1200fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
@@ -168,8 +169,8 @@
     <Acquisition_Duration type='DBL'>100</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
-    <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>4</Number_of_Accumulations>
+    <Number_of_Acquisitions_ type='I16'>2</Number_of_Acquisitions_>
+    <Number_of_Accumulations type='I16'>2</Number_of_Accumulations>
     <Table_of_Waveforms dim='[11]' type='String'>
       <String>AutLaserOff</String>
       <String>AutLaserOn</String>
@@ -183,7 +184,7 @@
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaExcitAcq1min
+    <Script_Text type='String'>script PireneaExcitAcq5sEmptyingExcitAcq7s
    wait until scriptTrigger0 
    wait 949940
    generate AutLaserOn
@@ -198,15 +199,17 @@
    generate AutLaserOnFilterOn
    wait 47100
    generate AutLaserOff
-   wait 59950000
+   wait 4950000
    generate ExcitAcq
-   wait 10000000
+   wait 1000000
    generate FilterOff
-   wait 2000
+   wait 1000
    generate FilterOffEmptyingStart
    wait 1000000
    generate FilterOffEmptyingStop
    wait 2000
+   generate ExcitAcq
+   wait 1000000
    generate Zeros
 end script</Script_Text>
   </TIMING_Inputs>
@@ -261,4 +264,55 @@ end script</Script_Text>
     <Clock_Rate type='DBL'>1000000</Clock_Rate>
     <Trigger_Source type='String'>PFI0</Trigger_Source>
   </HSDIO_6541_Inputs>
+  <EXCIT_Table mems='4'>
+    <Number_of_Excits type='U16'>0</Number_of_Excits>
+    <Number_of_Ejects type='U16'>0</Number_of_Ejects>
+    <Sampling_Frequency type='DBL'>0</Sampling_Frequency>
+    <Waveforms_Table dim='[1,11]' type='String'>
+      <String>Excit1</String>
+      <String>name</String>
+      <String>Swift</String>
+      <String>0.5</String>
+      <String>1200</String>
+      <String>70</String>
+      <String>150</String>
+      <String>550</String>
+      <String>0</String>
+      <String>0</String>
+      <String>0</String>
+    </Waveforms_Table>
+  </EXCIT_Table>
+  <TIMING_Table mems='3'>
+    <Mandatory_Items mems='8'>
+      <Script_Name type='String'></Script_Name>
+      <HSDIO_Delay type='DBL'>60</HSDIO_Delay>
+      <Shutter_Delay_before_Ablation type='DBL'>50</Shutter_Delay_before_Ablation>
+      <Shutter_Delay_after_Ablation type='DBL'>50</Shutter_Delay_after_Ablation>
+      <Filter_Tau type='DBL'>2</Filter_Tau>
+      <Trapping_Delay type='DBL'>600</Trapping_Delay>
+      <Trapping_Duration type='DBL'>300</Trapping_Duration>
+      <Emtyping_Duration type='DBL'>1000</Emtyping_Duration>
+    </Mandatory_Items>
+    <Optional_Items mems='6'>
+      <Eject type='U32'>0</Eject>
+      <Acq type='I32'>0</Acq>
+      <Excit type='U32'>0</Excit>
+      <Gas type='I32'>0</Gas>
+      <Laser type='I32'>0</Laser>
+      <Lamp type='I32'>0</Lamp>
+    </Optional_Items>
+    <Times_Table dim='[1,11]' type='String'>
+      <String>Excit1</String>
+      <String>name</String>
+      <String>Swift</String>
+      <String>0.5</String>
+      <String>1200</String>
+      <String>70</String>
+      <String>150</String>
+      <String>550</String>
+      <String>0</String>
+      <String>0</String>
+      <String>0</String>
+    </Times_Table>
+  </TIMING_Table>
 </GXML_Root>
