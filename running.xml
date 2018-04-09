@@ -11,18 +11,18 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>06/04/2018 17:54:00.871</Date>
+    <Date type='String'>09/04/2018 12:53:26.908</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>test new XML file</Comment>
+    <Comment type='String'>Test PireneaFree5s</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
-      <Name>Other</Name>
+      <Name>Dissociation CID</Name>
     </Experiment_Procedures>
-    <Chemical_Source type='String'>Aggregate</Chemical_Source>
+    <Chemical_Source type='String'>PAH</Chemical_Source>
     <Sample_Components dim='[1]' type='String'>
-      <Name>Other</Name>
+      <Name>Coronene</Name>
     </Sample_Components>
     <Species dim='[1]' type='String'>
-      <Name>Other</Name>
+      <Name>Coronene</Name>
     </Species>
     <Laser_1 mems='4'>
       <Used type='Bool'>TRUE</Used>
@@ -31,7 +31,7 @@
       <Energy type='DBL'>25</Energy>
     </Laser_1>
     <Laser_2 mems='4'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>Surelite II</Name>
       <Wavelength type='DBL'>1000</Wavelength>
       <Energy type='DBL'>25</Energy>
@@ -55,19 +55,19 @@
       <Energy type='DBL'>23</Energy>
     </Laser_5>
     <Lamp_1 mems='4'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>UV Lamp</Name>
       <Wavelength type='DBL'>200</Wavelength>
       <Attenuation type='DBL'>-5</Attenuation>
     </Lamp_1>
     <Lamp_2 mems='4'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>X Lamp</Name>
       <Wavelength type='DBL'>200</Wavelength>
       <Attenuation type='DBL'>-5</Attenuation>
     </Lamp_2>
     <Gas_1 mems='3'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>Helium</Name>
       <Pressure type='DBL'>100</Pressure>
     </Gas_1>
@@ -154,36 +154,36 @@
     </Adiabatic_Waveforms>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
-    <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f250p0to350p0a70d800fs10end script</Script_Text>
-    <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1Swift0p5f250p0to350p0a70d800fs10</String>
+    <Number_of_Excitations type='I32'>0</Number_of_Excitations>
+    <Script_Text type='String'>script  excit0wfmend script</Script_Text>
+    <Table_of_Waveforms dim='[0]' type='String'>
+      <String></String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>1000000</Record_Length>
-    <Sample_Rate type='DBL'>1E+7</Sample_Rate>
+    <Record_Length type='I32'>524000</Record_Length>
+    <Sample_Rate type='DBL'>2000000</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
     <Vertical_Range type='DBL'>0.4</Vertical_Range>
-    <Acquisition_Duration type='DBL'>100</Acquisition_Duration>
+    <Acquisition_Duration type='DBL'>262</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>4</Number_of_Accumulations>
+    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
     <Table_of_Waveforms dim='[11]' type='String'>
+      <String>Acq</String>
       <String>AutLaserOff</String>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
       <String>AutLaserOnFilterOffTrapStart</String>
       <String>AutLaserOnFilterOffTrapStop</String>
       <String>AutLaserOnFilterOn</String>
-      <String>ExcitAcq</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaExcitAcq4s
+    <Script_Text type='String'>script PireneaFree5s
    wait until scriptTrigger0 
    wait 949940
    generate AutLaserOn
@@ -198,8 +198,8 @@
    generate AutLaserOnFilterOn
    wait 47100
    generate AutLaserOff
-   wait 3950000
-   generate ExcitAcq
+   wait 4950000
+   generate Acq
    wait 1000000
    generate FilterOff
    wait 1000
