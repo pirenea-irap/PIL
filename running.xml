@@ -11,9 +11,11 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>09/04/2018 12:53:26.908</Date>
-    <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test PireneaFree5s</Comment>
+    <Date type='String'>09/04/2018 14:46:14.630</Date>
+    <User_Name type='String'>David MURAT</User_Name>
+    <Comment type='String'>Test niveau d&apos;excitation apres ampli
+50%
+Gain = 0.31</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Dissociation CID</Name>
     </Experiment_Procedures>
@@ -154,10 +156,10 @@
     </Adiabatic_Waveforms>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
-    <Number_of_Excitations type='I32'>0</Number_of_Excitations>
-    <Script_Text type='String'>script  excit0wfmend script</Script_Text>
-    <Table_of_Waveforms dim='[0]' type='String'>
-      <String></String>
+    <Number_of_Excitations type='I32'>1</Number_of_Excitations>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f150p0to550p0a50d1200fs20end script</Script_Text>
+    <Table_of_Waveforms dim='[1]' type='String'>
+      <String>E1Swift0p5f150p0to550p0a50d1200fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
@@ -171,19 +173,19 @@
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
     <Table_of_Waveforms dim='[11]' type='String'>
-      <String>Acq</String>
       <String>AutLaserOff</String>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
       <String>AutLaserOnFilterOffTrapStart</String>
       <String>AutLaserOnFilterOffTrapStop</String>
       <String>AutLaserOnFilterOn</String>
+      <String>ExcitAcq</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaFree5s
+    <Script_Text type='String'>script PireneaExcitAcq4s
    wait until scriptTrigger0 
    wait 949940
    generate AutLaserOn
@@ -198,8 +200,8 @@
    generate AutLaserOnFilterOn
    wait 47100
    generate AutLaserOff
-   wait 4950000
-   generate Acq
+   wait 3950000
+   generate ExcitAcq
    wait 1000000
    generate FilterOff
    wait 1000
