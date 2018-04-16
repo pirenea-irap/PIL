@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>12/04/2018 23:16:04.852</Date>
-    <User_Name type='String'>Anthony BONNAMY</User_Name>
-    <Comment type='String'>A jeter</Comment>
+    <Date type='String'>16/04/2018 10:46:10.116</Date>
+    <User_Name type='String'>Odile COEUR-JOLY</User_Name>
+    <Comment type='String'>Test Free 1s No Laser</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Dissociation CID</Name>
     </Experiment_Procedures>
@@ -25,7 +25,7 @@
       <Name>Coronene</Name>
     </Species>
     <Laser_1 mems='4'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>Ablation Surelite I</Name>
       <Wavelength type='DBL'>1000</Wavelength>
       <Energy type='DBL'>25</Energy>
@@ -161,41 +161,39 @@
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>30000000</Record_Length>
-    <Sample_Rate type='DBL'>2E+7</Sample_Rate>
+    <Record_Length type='I32'>1310000</Record_Length>
+    <Sample_Rate type='DBL'>5000000</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
-    <Vertical_Range type='DBL'>0.2</Vertical_Range>
-    <Acquisition_Duration type='DBL'>1500</Acquisition_Duration>
+    <Vertical_Range type='DBL'>0.4</Vertical_Range>
+    <Acquisition_Duration type='DBL'>262</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>5</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[11]' type='String'>
+    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
+    <Table_of_Waveforms dim='[9]' type='String'>
       <String>Acq</String>
       <String>AutLaserOff</String>
-      <String>AutLaserOn</String>
-      <String>AutLaserOnFilterOff</String>
-      <String>AutLaserOnFilterOffTrapStart</String>
-      <String>AutLaserOnFilterOffTrapStop</String>
-      <String>AutLaserOnFilterOn</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
+      <String>FilterOffTrapStart</String>
+      <String>FilterOffTrapStop</String>
+      <String>FilterOn</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaFree1s
+    <Script_Text type='String'>script PireneaFree1sNoLaser
    wait until scriptTrigger0 
    wait 949940
-   generate AutLaserOn
+   generate AutLaserOff
    wait 49000
-   generate AutLaserOnFilterOff
+   generate FilterOff
    wait 1000
    wait 600
-   generate AutLaserOnFilterOffTrapStart
+   generate FilterOffTrapStart
    wait 300
-   generate AutLaserOnFilterOffTrapStop
+   generate FilterOffTrapStop
    wait 2000
-   generate AutLaserOnFilterOn
+   generate FilterOn
    wait 47100
    generate AutLaserOff
    wait 950000
