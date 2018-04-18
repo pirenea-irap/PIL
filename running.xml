@@ -11,10 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>16/04/2018 17:40:50.153</Date>
+    <Date type='String'>18/04/2018 13:34:32.302</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Free 1s No Laser
-Excit with 1%</Comment>
+    <Comment type='String'>Test Free 1s No Laser</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Dissociation CID</Name>
     </Experiment_Procedures>
@@ -155,26 +154,25 @@ Excit with 1%</Comment>
     </Adiabatic_Waveforms>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
-    <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f150p0to550p0a1d1200fs20end script</Script_Text>
-    <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1Swift0p5f150p0to550p0a1d1200fs20</String>
+    <Number_of_Excitations type='I32'>0</Number_of_Excitations>
+    <Script_Text type='String'>script  excit0wfmend script</Script_Text>
+    <Table_of_Waveforms dim='[0]' type='String'>
+      <String></String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>1310000</Record_Length>
-    <Sample_Rate type='DBL'>5000000</Sample_Rate>
+    <Record_Length type='I32'>16000000</Record_Length>
+    <Sample_Rate type='DBL'>1E+7</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
-    <Vertical_Range type='DBL'>0.4</Vertical_Range>
-    <Acquisition_Duration type='DBL'>262</Acquisition_Duration>
+    <Vertical_Range type='DBL'>0.2</Vertical_Range>
+    <Acquisition_Duration type='DBL'>1600</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>3</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[10]' type='String'>
+    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
+    <Table_of_Waveforms dim='[9]' type='String'>
       <String>Acq</String>
       <String>AutLaserOff</String>
-      <String>Excit</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
@@ -183,7 +181,7 @@ Excit with 1%</Comment>
       <String>FilterOn</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaFree1sNoLaserInitExcit
+    <Script_Text type='String'>script PireneaFree1sNoLaser
    wait until scriptTrigger0 
    wait 949940
    generate AutLaserOff
@@ -199,8 +197,6 @@ Excit with 1%</Comment>
    wait 47100
    generate AutLaserOff
    wait 950000
-   generate Excit
-   wait 1200
    generate Acq
    wait 1000000
    generate FilterOff
@@ -214,7 +210,7 @@ end script</Script_Text>
   </TIMING_Inputs>
   <PROCESSING__Inputs mems='3'>
     <Reference_Mass type='DBL'>300.0939</Reference_Mass>
-    <Cyclotron_Freq type='DBL'>255.725</Cyclotron_Freq>
+    <Cyclotron_Freq type='DBL'>255.727</Cyclotron_Freq>
     <Magnetron_Freq type='DBL'>0.001</Magnetron_Freq>
   </PROCESSING__Inputs>
   <SOFTWARE_Inputs mems='16'>
