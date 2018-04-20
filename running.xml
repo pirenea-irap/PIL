@@ -11,7 +11,7 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>18/04/2018 13:34:32.302</Date>
+    <Date type='String'>19/04/2018 18:00:42.580</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>Test Free 1s No Laser</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
@@ -161,11 +161,11 @@
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>16000000</Record_Length>
+    <Record_Length type='I32'>2000000</Record_Length>
     <Sample_Rate type='DBL'>1E+7</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
     <Vertical_Range type='DBL'>0.2</Vertical_Range>
-    <Acquisition_Duration type='DBL'>1600</Acquisition_Duration>
+    <Acquisition_Duration type='DBL'>200</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
