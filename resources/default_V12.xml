@@ -1,6 +1,6 @@
 <?xml version='1.0' standalone='yes' ?>
 <GXML_Root>
-  <XML_Version type='Version'>1.3</XML_Version>
+  <XML_Version type='Version'>1.2</XML_Version>
   <SPECTRUM mems='6'>
     <Day_Path type='Path'>D:\PIRENEA\DATA\2016\data_2016_01_01</Day_Path>
     <Spectrum_Name type='String'>2016_01_01_000.A00</Spectrum_Name>
@@ -11,7 +11,7 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>18/05/2018 16:28:13</Date>
+    <Date type='String'>03/04/2018 21:17:00</Date>
     <User_Name type='String'>Christine JOBLIN</User_Name>
     <Comment type='String'>No comment</Comment>
     <Experiment_Procedures dim='[2]' type='String'>
@@ -186,11 +186,11 @@ end script</Script_Text>
    wait 1000
 end script</Script_Text>
   </TIMING_Inputs>
-  <PROCESSING_Inputs mems='3'>
+  <PROCESSING__Inputs mems='3'>
     <Reference_Mass type='DBL'>300.0939</Reference_Mass>
     <Cyclotron_Freq type='DBL'>255.727</Cyclotron_Freq>
     <Magnetron_Freq type='DBL'>0.001</Magnetron_Freq>
-  </PROCESSING_Inputs>
+  </PROCESSING__Inputs>
   <SOFTWARE_Inputs mems='16'>
     <Application_Directory type='Path'>D:\S.O.F.T.S\LABVIEW\PIL</Application_Directory>
     <Software_Version type='String'>1.0.0</Software_Version>
@@ -237,7 +237,7 @@ end script</Script_Text>
     <Clock_Rate type='DBL'>1000000</Clock_Rate>
     <Trigger_Source type='String'>PFI0</Trigger_Source>
   </HSDIO_6541_Inputs>
-  <EXCIT_Table mems='4'>
+  <EXCIT_Waveforms_Table mems='4'>
     <Number_of_Excits type='U16'>0</Number_of_Excits>
     <Number_of_Ejects type='U16'>0</Number_of_Ejects>
     <Sampling_Frequency type='DBL'>0</Sampling_Frequency>
@@ -254,5 +254,5 @@ end script</Script_Text>
       <String>0</String>
       <String>0</String>
     </Waveforms_Table>
-  </EXCIT_Table>
+  </EXCIT_Waveforms_Table>
 </GXML_Root>

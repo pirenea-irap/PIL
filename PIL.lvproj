@@ -398,7 +398,6 @@
 				<Item Name="VerQueryValue.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/fileVersionInfo.llb/VerQueryValue.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="EXCIT_Waveforms_Table.ctl" Type="VI" URL="../controls/EXCIT_Waveforms_Table.ctl"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -432,26 +431,26 @@
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/PIL_2018_04_20</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/PIL_2018_05_18</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{163C9F3F-9F83-45B3-8E00-F8DB01A940FA}</Property>
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
 				<Property Name="Bld_supportedLanguage[1]" Type="Str">French</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">2</Property>
-				<Property Name="Bld_version.build" Type="Int">111</Property>
+				<Property Name="Bld_version.build" Type="Int">112</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">PIL.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/PIL_2018_04_20/NI_AB_PROJECTNAME.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/PIL_2018_05_18/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Répertoire de support</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/PIL_2018_04_20/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/PIL_2018_05_18/data</Property>
 				<Property Name="Destination[2].destName" Type="Str">resources</Property>
-				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2018_04_20/resources</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2018_05_18/resources</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Source[0].itemID" Type="Str">{A8B3F29F-88AF-40D7-965C-ACCD972C3CFB}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{CAD6DBB7-DA25-4481-A8D8-C321025A4F4C}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/PIL_Main.vi</Property>
@@ -467,7 +466,7 @@
 				<Property Name="SourceCount" Type="Int">3</Property>
 				<Property Name="TgtF_companyName" Type="Str">IRAP</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">PIRENEA and PIRENEA-2 LabVIEW software.</Property>
-				<Property Name="TgtF_internalName" Type="Str">PIL v1.3d 20/04/2018</Property>
+				<Property Name="TgtF_internalName" Type="Str">PIL v1.4 18/05/2018</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2018 IRAP</Property>
 				<Property Name="TgtF_productName" Type="Str">PIL</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{ED0BDDF1-E310-4993-833A-C5113E10FBB6}</Property>
