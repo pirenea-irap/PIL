@@ -11,7 +11,7 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>28/05/2018 21:14:57.084</Date>
+    <Date type='String'>01/06/2018 17:45:25.955</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>Test accums OK
 </Comment>
@@ -156,9 +156,9 @@
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f150p0to550p0a70d1200fs20end script</Script_Text>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1TwoSwift0p5f250p0to600p0a70and700p0to1000p0a50d1200fs10end script</Script_Text>
     <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1Swift0p5f150p0to550p0a70d1200fs20</String>
+      <String>E1TwoSwift0p5f250p0to600p0a70and700p0to1000p0a50d1200fs10</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
@@ -170,23 +170,22 @@
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>5</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[13]' type='String'>
+    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
+    <Table_of_Waveforms dim='[12]' type='String'>
+      <String>Acq</String>
       <String>AutLaserOff</String>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
       <String>AutLaserOnFilterOffTrapStart</String>
       <String>AutLaserOnFilterOffTrapStop</String>
       <String>AutLaserOnFilterOn</String>
-      <String>ExcitAcq</String>
+      <String>Excit</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
-      <String>Gas1Off</String>
-      <String>Gas1On</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaGas2sExcitAcq8s
+    <Script_Text type='String'>script Pirenea2Excits1Acq4s
    wait until scriptTrigger0 
    wait 949940
    generate AutLaserOn
@@ -201,12 +200,12 @@
    generate AutLaserOnFilterOn
    wait 47100
    generate AutLaserOff
-   wait 1950000
-   generate Gas1On
-   wait 150000
-   generate Gas1Off
-   wait 5850000
-   generate ExcitAcq
+   wait 3950000
+   generate Excit
+   wait 1200
+   generate Excit
+   wait 1200
+   generate Acq
    wait 1000000
    generate FilterOff
    wait 1000
@@ -215,7 +214,8 @@
    generate FilterOffEmptyingStop
    wait 2000
    generate Zeros
-end script</Script_Text>
+end script
+</Script_Text>
   </TIMING_Inputs>
   <PROCESSING_Inputs mems='3'>
     <Reference_Mass type='DBL'>300.0939</Reference_Mass>
