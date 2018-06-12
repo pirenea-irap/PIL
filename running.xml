@@ -11,7 +11,7 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>11/06/2018 21:57:42.435</Date>
+    <Date type='String'>12/06/2018 16:36:53.723</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>Test new Excit Setup</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
@@ -155,9 +155,9 @@
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1TwoSwift0p8f150p0to250p0a40and255p0to600p0a60d1200fs20end script</Script_Text>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1TwoSwift0p8f305p0to354p1a24and356p5to406p2a24d8000fs20end script</Script_Text>
     <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1TwoSwift0p8f150p0to250p0a40and255p0to600p0a60d1200fs20</String>
+      <String>E1TwoSwift0p8f305p0to354p1a24and356p5to406p2a24d8000fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
@@ -266,21 +266,22 @@ end script
     <Trigger_Source type='String'>PFI0</Trigger_Source>
   </HSDIO_6541_Inputs>
   <EXCIT_Table mems='4'>
-    <Number_of_Excits type='U16'>0</Number_of_Excits>
-    <Number_of_Ejects type='U16'>0</Number_of_Ejects>
-    <Sampling_Frequency type='DBL'>0</Sampling_Frequency>
-    <Waveforms_Table dim='[1,11]' type='String'>
-      <String>Excit1</String>
-      <String>name</String>
-      <String>Swift</String>
-      <String>0.5</String>
-      <String>1200</String>
-      <String>70</String>
-      <String>150</String>
-      <String>550</String>
-      <String>0</String>
-      <String>0</String>
-      <String>0</String>
+    <Number_of_Excits type='U16'>1</Number_of_Excits>
+    <Number_of_Ejects type='U16'>1</Number_of_Ejects>
+    <Sampling_Frequency type='DBL'>20</Sampling_Frequency>
+    <Waveforms_Table dim='[1,12]' type='String'>
+      <String>Eject1</String>
+      <String>E1</String>
+      <String>TwoSwift</String>
+      <String>0.8</String>
+      <String>8000.0</String>
+      <String>24.0</String>
+      <String>305.0</String>
+      <String>354.1</String>
+      <String>24</String>
+      <String>356.5</String>
+      <String>406.2</String>
+      <String>20</String>
     </Waveforms_Table>
   </EXCIT_Table>
   <TIMING_Table mems='3'>
