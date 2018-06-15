@@ -34,9 +34,142 @@
 		<Item Name="resources" Type="Folder" URL="../resources">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="subVIs" Type="Folder" URL="../subVIs">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="subVIs" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
+			<Item Name="Gui" Type="Folder">
+				<Item Name="Gui_About.vi" Type="VI" URL="../subVIs/Gui/Gui_About.vi"/>
+				<Item Name="Gui_Fill_List_From_File.vi" Type="VI" URL="../subVIs/Gui/Gui_Fill_List_From_File.vi"/>
+				<Item Name="Gui_Fill_Ring_From_File.vi" Type="VI" URL="../subVIs/Gui/Gui_Fill_Ring_From_File.vi"/>
+				<Item Name="Gui_Fill_Text_From_File.vi" Type="VI" URL="../subVIs/Gui/Gui_Fill_Text_From_File.vi"/>
+				<Item Name="Gui_Set_Gas_Refs.vi" Type="VI" URL="../subVIs/Gui/Gui_Set_Gas_Refs.vi"/>
+				<Item Name="Gui_Set_Lamp_Refs.vi" Type="VI" URL="../subVIs/Gui/Gui_Set_Lamp_Refs.vi"/>
+				<Item Name="Gui_Set_Laser_Refs.vi" Type="VI" URL="../subVIs/Gui/Gui_Set_Laser_Refs.vi"/>
+				<Item Name="Gui_Set_Lists_Refs.vi" Type="VI" URL="../subVIs/Gui/Gui_Set_Lists_Refs.vi"/>
+				<Item Name="Gui_Set_Rings_Refs.vi" Type="VI" URL="../subVIs/Gui/Gui_Set_Rings_Refs.vi"/>
+				<Item Name="Gui_SetupData.vi" Type="VI" URL="../subVIs/Gui/Gui_SetupData.vi"/>
+				<Item Name="Gui_SetupExcitation.vi" Type="VI" URL="../subVIs/Gui/Gui_SetupExcitation.vi"/>
+				<Item Name="Gui_SetupExperiment.vi" Type="VI" URL="../subVIs/Gui/Gui_SetupExperiment.vi"/>
+				<Item Name="Gui_SetupExpert.vi" Type="VI" URL="../subVIs/Gui/Gui_SetupExpert.vi"/>
+				<Item Name="Gui_SetupProcessing.vi" Type="VI" URL="../subVIs/Gui/Gui_SetupProcessing.vi"/>
+				<Item Name="Gui_SetupSequence.vi" Type="VI" URL="../subVIs/Gui/Gui_SetupSequence.vi"/>
+				<Item Name="Gui_SetupTimingScript.vi" Type="VI" URL="../subVIs/Gui/Gui_SetupTimingScript.vi"/>
+				<Item Name="Gui_SetupTrapping.vi" Type="VI" URL="../subVIs/Gui/Gui_SetupTrapping.vi"/>
+				<Item Name="Gui_SetupVoltages.vi" Type="VI" URL="../subVIs/Gui/Gui_SetupVoltages.vi"/>
+			</Item>
+			<Item Name="ICR" Type="Folder">
+				<Item Name="AO_6711_Init_Session.vi" Type="VI" URL="../subVIs/ICR/AO_6711_Init_Session.vi"/>
+				<Item Name="AO_6711_Load_Wfm.vi" Type="VI" URL="../subVIs/ICR/AO_6711_Load_Wfm.vi"/>
+				<Item Name="AO_6711_Run_And_Stop.vi" Type="VI" URL="../subVIs/ICR/AO_6711_Run_And_Stop.vi"/>
+				<Item Name="AO_6711_Run_Async.vi" Type="VI" URL="../subVIs/ICR/AO_6711_Run_Async.vi"/>
+				<Item Name="AWG_5421_Init_Session.vi" Type="VI" URL="../subVIs/ICR/AWG_5421_Init_Session.vi"/>
+				<Item Name="AWG_5421_Load_Wfm_Script.vi" Type="VI" URL="../subVIs/ICR/AWG_5421_Load_Wfm_Script.vi"/>
+				<Item Name="AWG_5421_Run_And_Stop.vi" Type="VI" URL="../subVIs/ICR/AWG_5421_Run_And_Stop.vi"/>
+				<Item Name="AWG_5421_Run_Async.vi" Type="VI" URL="../subVIs/ICR/AWG_5421_Run_Async.vi"/>
+				<Item Name="AWG_5421_Stop_Session.vi" Type="VI" URL="../subVIs/ICR/AWG_5421_Stop_Session.vi"/>
+				<Item Name="DIGIT_5122_Init_Session.vi" Type="VI" URL="../subVIs/ICR/DIGIT_5122_Init_Session.vi"/>
+				<Item Name="DIGIT_5122_Run_And_Fetch.vi" Type="VI" URL="../subVIs/ICR/DIGIT_5122_Run_And_Fetch.vi"/>
+				<Item Name="DIGIT_5122_Run_Async.vi" Type="VI" URL="../subVIs/ICR/DIGIT_5122_Run_Async.vi"/>
+				<Item Name="DIGIT_5122_Run_Write_Stop.vi" Type="VI" URL="../subVIs/ICR/DIGIT_5122_Run_Write_Stop.vi"/>
+				<Item Name="DIGIT_5122_Stop_Session.vi" Type="VI" URL="../subVIs/ICR/DIGIT_5122_Stop_Session.vi"/>
+				<Item Name="HSDIO_6541_Init_Session.vi" Type="VI" URL="../subVIs/ICR/HSDIO_6541_Init_Session.vi"/>
+				<Item Name="HSDIO_6541_Load_Wfm_Script.vi" Type="VI" URL="../subVIs/ICR/HSDIO_6541_Load_Wfm_Script.vi"/>
+				<Item Name="HSDIO_6541_Run.vi" Type="VI" URL="../subVIs/ICR/HSDIO_6541_Run.vi"/>
+				<Item Name="HSDIO_6541_Stop_Session.vi" Type="VI" URL="../subVIs/ICR/HSDIO_6541_Stop_Session.vi"/>
+				<Item Name="ICR_Finish_Sequence.vi" Type="VI" URL="../subVIs/ICR/ICR_Finish_Sequence.vi"/>
+				<Item Name="ICR_Initialize_Panel.vi" Type="VI" URL="../subVIs/ICR/ICR_Initialize_Panel.vi"/>
+				<Item Name="ICR_Reset_Hardware.vi" Type="VI" URL="../subVIs/ICR/ICR_Reset_Hardware.vi"/>
+				<Item Name="ICR_Run_Sequence.vi" Type="VI" URL="../subVIs/ICR/ICR_Run_Sequence.vi"/>
+				<Item Name="ICR_Setup_Hardware.vi" Type="VI" URL="../subVIs/ICR/ICR_Setup_Hardware.vi"/>
+				<Item Name="ICR_Setup_Sequence.vi" Type="VI" URL="../subVIs/ICR/ICR_Setup_Sequence.vi"/>
+				<Item Name="ICR_Start_Timer.vi" Type="VI" URL="../subVIs/ICR/ICR_Start_Timer.vi"/>
+				<Item Name="ICR_Timer_CountDown.vi" Type="VI" URL="../subVIs/ICR/ICR_Timer_CountDown.vi"/>
+				<Item Name="ICR_Timer_Start_Async.vi" Type="VI" URL="../subVIs/ICR/ICR_Timer_Start_Async.vi"/>
+				<Item Name="ICR_Update_Controls.vi" Type="VI" URL="../subVIs/ICR/ICR_Update_Controls.vi"/>
+				<Item Name="QMH_ICR_Control_EnQueue.vi" Type="VI" URL="../subVIs/ICR/QMH_ICR_Control_EnQueue.vi"/>
+				<Item Name="QMH_ICR_Create_Queue.vi" Type="VI" URL="../subVIs/ICR/QMH_ICR_Create_Queue.vi"/>
+				<Item Name="QMH_ICR_Create_User_Event.vi" Type="VI" URL="../subVIs/ICR/QMH_ICR_Create_User_Event.vi"/>
+				<Item Name="QMH_ICR_Create_User_Exit_Event.vi" Type="VI" URL="../subVIs/ICR/QMH_ICR_Create_User_Exit_Event.vi"/>
+			</Item>
+			<Item Name="Script" Type="Folder">
+				<Item Name="Script_Excit_Check.vi" Type="VI" URL="../subVIs/Script/Script_Excit_Check.vi"/>
+				<Item Name="Script_Excit_Check_Wfm_Existence.vi" Type="VI" URL="../subVIs/Script/Script_Excit_Check_Wfm_Existence.vi"/>
+				<Item Name="Script_Excit_Create_From_Wfms.vi" Type="VI" URL="../subVIs/Script/Script_Excit_Create_From_Wfms.vi"/>
+				<Item Name="Script_Excit_Extract_Table_From_Text.vi" Type="VI" URL="../subVIs/Script/Script_Excit_Extract_Table_From_Text.vi"/>
+				<Item Name="Script_Excit_Extract_Values_From_Wfm_Name.vi" Type="VI" URL="../subVIs/Script/Script_Excit_Extract_Values_From_Wfm_Name.vi"/>
+				<Item Name="Script_Extract_Wfms.vi" Type="VI" URL="../subVIs/Script/Script_Extract_Wfms.vi"/>
+				<Item Name="Script_Timing_Check_Wfm_Existence.vi" Type="VI" URL="../subVIs/Script/Script_Timing_Check_Wfm_Existence.vi"/>
+				<Item Name="Script_Timing_Extract_Excit_Acq.vi" Type="VI" URL="../subVIs/Script/Script_Timing_Extract_Excit_Acq.vi"/>
+				<Item Name="Script_Timing_Extract_Total_Duration.vi" Type="VI" URL="../subVIs/Script/Script_Timing_Extract_Total_Duration.vi"/>
+				<Item Name="Script_Timing_Extract_Wfms.vi" Type="VI" URL="../subVIs/Script/Script_Timing_Extract_Wfms.vi"/>
+				<Item Name="Script_Timing_List_From_Directory.vi" Type="VI" URL="../subVIs/Script/Script_Timing_List_From_Directory.vi"/>
+			</Item>
+			<Item Name="Tools" Type="Folder">
+				<Item Name="Data_Decimate.vi" Type="VI" URL="../subVIs/Tools/Data_Decimate.vi"/>
+				<Item Name="Data_Get_Spectrum_Number.vi" Type="VI" URL="../subVIs/Tools/Data_Get_Spectrum_Number.vi"/>
+				<Item Name="Data_Path_Of_Day.vi" Type="VI" URL="../subVIs/Tools/Data_Path_Of_Day.vi"/>
+				<Item Name="Data_Process_Mass.vi" Type="VI" URL="../subVIs/Tools/Data_Process_Mass.vi"/>
+				<Item Name="Data_Process_Spectrum.vi" Type="VI" URL="../subVIs/Tools/Data_Process_Spectrum.vi"/>
+				<Item Name="Data_Read_Signal_From_Disk.vi" Type="VI" URL="../subVIs/Tools/Data_Read_Signal_From_Disk.vi"/>
+				<Item Name="Data_Read_Signal_From_Disk_Start_End.vi" Type="VI" URL="../subVIs/Tools/Data_Read_Signal_From_Disk_Start_End.vi"/>
+				<Item Name="Data_Write_Accum.vi" Type="VI" URL="../subVIs/Tools/Data_Write_Accum.vi"/>
+				<Item Name="Data_Write_Disk.vi" Type="VI" URL="../subVIs/Tools/Data_Write_Disk.vi"/>
+				<Item Name="Data_Write_Signal_To_Disk.vi" Type="VI" URL="../subVIs/Tools/Data_Write_Signal_To_Disk.vi"/>
+				<Item Name="Data_Write_Single.vi" Type="VI" URL="../subVIs/Tools/Data_Write_Single.vi"/>
+				<Item Name="Data_Xml_Spectrum_Names.vi" Type="VI" URL="../subVIs/Tools/Data_Xml_Spectrum_Names.vi"/>
+				<Item Name="Excit_Extract_Fs.vi" Type="VI" URL="../subVIs/Tools/Excit_Extract_Fs.vi"/>
+				<Item Name="Excit_Extract_One_Wfm_From_Table.vi" Type="VI" URL="../subVIs/Tools/Excit_Extract_One_Wfm_From_Table.vi"/>
+				<Item Name="Excit_Format_Wfm_Name.vi" Type="VI" URL="../subVIs/Tools/Excit_Format_Wfm_Name.vi"/>
+				<Item Name="Excit_Get_Wfm_Name_Binary.vi" Type="VI" URL="../subVIs/Tools/Excit_Get_Wfm_Name_Binary.vi"/>
+				<Item Name="Excit_Process_Signal.vi" Type="VI" URL="../subVIs/Tools/Excit_Process_Signal.vi"/>
+				<Item Name="Excit_Process_Wfm_And_Name.vi" Type="VI" URL="../subVIs/Tools/Excit_Process_Wfm_And_Name.vi"/>
+				<Item Name="Excit_Write_Wfm_Binary_Disk.vi" Type="VI" URL="../subVIs/Tools/Excit_Write_Wfm_Binary_Disk.vi"/>
+				<Item Name="Files_Get_Paths.vi" Type="VI" URL="../subVIs/Tools/Files_Get_Paths.vi"/>
+				<Item Name="Ini_Read_LoadDir.vi" Type="VI" URL="../subVIs/Tools/Ini_Read_LoadDir.vi"/>
+				<Item Name="Ini_Read_Setup.vi" Type="VI" URL="../subVIs/Tools/Ini_Read_Setup.vi"/>
+				<Item Name="Trap_Read_Wfm.vi" Type="VI" URL="../subVIs/Tools/Trap_Read_Wfm.vi"/>
+				<Item Name="Trap_Write_Wfm.vi" Type="VI" URL="../subVIs/Tools/Trap_Write_Wfm.vi"/>
+			</Item>
+			<Item Name="UI" Type="Folder">
+				<Item Name="QMH_UI_Control_EnQueue.vi" Type="VI" URL="../subVIs/UI/QMH_UI_Control_EnQueue.vi"/>
+				<Item Name="QMH_UI_Create_Queue.vi" Type="VI" URL="../subVIs/UI/QMH_UI_Create_Queue.vi"/>
+				<Item Name="QMH_UI_Create_User_Event.vi" Type="VI" URL="../subVIs/UI/QMH_UI_Create_User_Event.vi"/>
+				<Item Name="UI_Enable_Disable_Clusters.vi" Type="VI" URL="../subVIs/UI/UI_Enable_Disable_Clusters.vi"/>
+				<Item Name="UI_Enable_Disable_Controls.vi" Type="VI" URL="../subVIs/UI/UI_Enable_Disable_Controls.vi"/>
+				<Item Name="UI_Get_Application_Infos.vi" Type="VI" URL="../subVIs/UI/UI_Get_Application_Infos.vi"/>
+				<Item Name="UI_Initialize_Panel.vi" Type="VI" URL="../subVIs/UI/UI_Initialize_Panel.vi"/>
+				<Item Name="UI_Prepare_Report.vi" Type="VI" URL="../subVIs/UI/UI_Prepare_Report.vi"/>
+				<Item Name="UI_Show_Hide_Clusters.vi" Type="VI" URL="../subVIs/UI/UI_Show_Hide_Clusters.vi"/>
+				<Item Name="UI_Show_Hide_Controls.vi" Type="VI" URL="../subVIs/UI/UI_Show_Hide_Controls.vi"/>
+				<Item Name="UI_Show_Hide_Strings.vi" Type="VI" URL="../subVIs/UI/UI_Show_Hide_Strings.vi"/>
+				<Item Name="UI_Update_Controls.vi" Type="VI" URL="../subVIs/UI/UI_Update_Controls.vi"/>
+			</Item>
+			<Item Name="Xml" Type="Folder">
+				<Item Name="Xml_Change_Tag_Value.vi" Type="VI" URL="../subVIs/Xml/Xml_Change_Tag_Value.vi"/>
+				<Item Name="Xml_Check_Version.vi" Type="VI" URL="../subVIs/Xml/Xml_Check_Version.vi"/>
+				<Item Name="Xml_Create_Default.vi" Type="VI" URL="../subVIs/Xml/Xml_Create_Default.vi"/>
+				<Item Name="Xml_Fill_Default_Experiments.vi" Type="VI" URL="../subVIs/Xml/Xml_Fill_Default_Experiments.vi"/>
+				<Item Name="Xml_Load_Default.vi" Type="VI" URL="../subVIs/Xml/Xml_Load_Default.vi"/>
+				<Item Name="Xml_Load_Excit_Table.vi" Type="VI" URL="../subVIs/Xml/Xml_Load_Excit_Table.vi"/>
+				<Item Name="Xml_Load_Experiment.vi" Type="VI" URL="../subVIs/Xml/Xml_Load_Experiment.vi"/>
+				<Item Name="Xml_Load_Expert.vi" Type="VI" URL="../subVIs/Xml/Xml_Load_Expert.vi"/>
+				<Item Name="Xml_Load_Sequence.vi" Type="VI" URL="../subVIs/Xml/Xml_Load_Sequence.vi"/>
+				<Item Name="Xml_Load_Spectrum.vi" Type="VI" URL="../subVIs/Xml/Xml_Load_Spectrum.vi"/>
+				<Item Name="Xml_Load_Timing_Table.vi" Type="VI" URL="../subVIs/Xml/Xml_Load_Timing_Table.vi"/>
+				<Item Name="Xml_Load_Voltages.vi" Type="VI" URL="../subVIs/Xml/Xml_Load_Voltages.vi"/>
+				<Item Name="Xml_Read_Hardware.vi" Type="VI" URL="../subVIs/Xml/Xml_Read_Hardware.vi"/>
+				<Item Name="Xml_Read_Write_Params.vi" Type="VI" URL="../subVIs/Xml/Xml_Read_Write_Params.vi"/>
+				<Item Name="Xml_Save_As_File.vi" Type="VI" URL="../subVIs/Xml/Xml_Save_As_File.vi"/>
+				<Item Name="Xml_Save_Excit_Table.vi" Type="VI" URL="../subVIs/Xml/Xml_Save_Excit_Table.vi"/>
+				<Item Name="Xml_Save_Experiment.vi" Type="VI" URL="../subVIs/Xml/Xml_Save_Experiment.vi"/>
+				<Item Name="Xml_Save_Expert.vi" Type="VI" URL="../subVIs/Xml/Xml_Save_Expert.vi"/>
+				<Item Name="Xml_Save_Sequence.vi" Type="VI" URL="../subVIs/Xml/Xml_Save_Sequence.vi"/>
+				<Item Name="Xml_Save_Spectrum.vi" Type="VI" URL="../subVIs/Xml/Xml_Save_Spectrum.vi"/>
+				<Item Name="Xml_Save_Timing_Table.vi" Type="VI" URL="../subVIs/Xml/Xml_Save_Timing_Table.vi"/>
+				<Item Name="Xml_Save_To_File.vi" Type="VI" URL="../subVIs/Xml/Xml_Save_To_File.vi"/>
+				<Item Name="Xml_Save_Voltages.vi" Type="VI" URL="../subVIs/Xml/Xml_Save_Voltages.vi"/>
+				<Item Name="Xml_Write_Disk.vi" Type="VI" URL="../subVIs/Xml/Xml_Write_Disk.vi"/>
+				<Item Name="Xml_Write_Hardware.vi" Type="VI" URL="../subVIs/Xml/Xml_Write_Hardware.vi"/>
+			</Item>
 		</Item>
 		<Item Name="tests" Type="Folder" URL="../tests">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
