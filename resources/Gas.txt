@@ -1,5 +1,0 @@
-Helium
-Argon
-Nitrogen
-Hydrogen
-Xeon

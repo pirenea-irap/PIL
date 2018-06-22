@@ -1,8 +1,0 @@
-Ion Cooling
-Dissociation CID
-Photodissociation
-Spectroscopy OPO
-Reactivity Electron
-Reactivity Gas
-Reactivity H Source
-Other
