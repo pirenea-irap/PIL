@@ -11,7 +11,7 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>05/07/2018 13:00:33.768</Date>
+    <Date type='String'>19/07/2018 16:00:19.724</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>Test after power reset</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
@@ -155,9 +155,9 @@
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1TwoSwift0p8f305p33to354p10a24and356p22to406p20a24d6000fs20end script</Script_Text>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f305p33to354p10a24d6000fs20end script</Script_Text>
     <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1TwoSwift0p8f305p33to354p10a24and356p22to406p20a24d6000fs20</String>
+      <String>E1Swift0p5f305p33to354p10a24d6000fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
@@ -270,17 +270,17 @@ end script
     <Number_of_Ejects type='U16'>1</Number_of_Ejects>
     <Sampling_Frequency type='DBL'>20</Sampling_Frequency>
     <Waveforms_Table dim='[1,12]' type='String'>
-      <String>Eject1</String>
+      <String>Excit1</String>
       <String>E1</String>
-      <String>TwoSwift</String>
-      <String>0.8</String>
+      <String>Swift</String>
+      <String>0.5</String>
       <String>6000</String>
       <String>24</String>
       <String>305.33</String>
       <String>354.10</String>
-      <String>24</String>
-      <String>356.22</String>
-      <String>406.20</String>
+      <String>0.0</String>
+      <String>0.0</String>
+      <String>0.0</String>
       <String>20</String>
     </Waveforms_Table>
   </EXCIT_Table>
