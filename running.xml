@@ -2,8 +2,8 @@
 <GXML_Root>
   <XML_Version type='Version'>1.3</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PIRENEA\DATA\2018\data_2018_06_22</Day_Path>
-    <Spectrum_Name type='String'>P1_2018_06_22_003.A00</Spectrum_Name>
+    <Day_Path type='Path'>D:\PIRENEA\DATA\2018\data_2018_12_04</Day_Path>
+    <Spectrum_Name type='String'>P2_2018_12_04_005.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
@@ -11,13 +11,13 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>19/07/2018 16:00:19.724</Date>
+    <Date type='String'>04/12/2018 16:57:52.769</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test after power reset</Comment>
+    <Comment type='String'>Test Free 1s No Laser</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
-    <Chemical_Source type='String'>Other</Chemical_Source>
+    <Chemical_Source type='String'>PAH</Chemical_Source>
     <Sample_Components dim='[1]' type='String'>
       <Name>Other</Name>
     </Sample_Components>
@@ -27,7 +27,7 @@
     <Laser_1 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Ablation Surelite I</Name>
-      <Wavelength type='DBL'>266</Wavelength>
+      <Wavelength type='DBL'>1000</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_1>
     <Laser_2 mems='4'>
@@ -55,7 +55,7 @@
       <Energy type='DBL'>23</Energy>
     </Laser_5>
     <Lamp_1 mems='4'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>UV Lamp</Name>
       <Wavelength type='DBL'>200</Wavelength>
       <Attenuation type='DBL'>-5</Attenuation>
@@ -67,7 +67,7 @@
       <Attenuation type='DBL'>-5</Attenuation>
     </Lamp_2>
     <Gas_1 mems='3'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>Helium</Name>
       <Pressure type='DBL'>100</Pressure>
     </Gas_1>
@@ -133,10 +133,10 @@
       <Numeric>0</Numeric>
     </Opening_Values>
     <Trapping_Values dim='[4]' type='DBL'>
-      <Numeric>6</Numeric>
-      <Numeric>6</Numeric>
-      <Numeric>6</Numeric>
-      <Numeric>6</Numeric>
+      <Numeric>2</Numeric>
+      <Numeric>9</Numeric>
+      <Numeric>2</Numeric>
+      <Numeric>9</Numeric>
     </Trapping_Values>
     <Emptying_Values dim='[4]' type='DBL'>
       <Numeric>-10</Numeric>
@@ -147,17 +147,19 @@
     <Adiabatic_ON type='Bool'>FALSE</Adiabatic_ON>
     <Adiabatic_Duration type='I32'>200</Adiabatic_Duration>
     <Adiabatic_Waveforms dim='[4]' type='String'>
-      <String>Adiabatic_Ramp_6_1_2000</String>
-      <String>Adiabatic_Ramp_6_3_2000</String>
-      <String>Adiabatic_Ramp_6_1_2000</String>
-      <String>Adiabatic_Ramp_6_3_2000</String>
+      <String>Adiabatic_None_2_2_2000</String>
+      <String>Adiabatic_RC_9_0_2000</String>
+      <String>Adiabatic_None_2_2_2000</String>
+      <String>Adiabatic_RC_9_0_2000</String>
     </Adiabatic_Waveforms>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
-    <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f305p33to354p10a24d6000fs20end script</Script_Text>
-    <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1Swift0p5f305p33to354p10a24d6000fs20</String>
+    <Number_of_Excitations type='I32'>3</Number_of_Excitations>
+    <Script_Text type='String'>script  excit3wfm    wait until scriptTrigger0    generate E1Swift0p6f255p00to600p00a50d800fs20    wait until scriptTrigger0    generate E2Swift0p6f255p00to600p00a50d800fs20    wait until scriptTrigger0    generate E3Swift0p7f255p00to600p00a50d800fs20end script</Script_Text>
+    <Table_of_Waveforms dim='[3]' type='String'>
+      <String>E1Swift0p6f255p00to600p00a50d800fs20</String>
+      <String>E2Swift0p6f255p00to600p00a50d800fs20</String>
+      <String>E3Swift0p7f255p00to600p00a50d800fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
@@ -170,13 +172,15 @@
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[12]' type='String'>
-      <String>AutLaserOn</String>
-      <String>AutLaserOnFilterOff</String>
-      <String>AutLaserOnFilterOffTrapStart</String>
-      <String>AutLaserOnFilterOffTrapStop</String>
-      <String>AutLaserOnFilterOn</String>
+    <Table_of_Waveforms dim='[14]' type='String'>
       <String>AutLaserOff</String>
+      <String>FilterOff</String>
+      <String>FilterOffTrapStart</String>
+      <String>FilterOffTrapStop</String>
+      <String>FilterOn</String>
+      <String>AutLaserOff</String>
+      <String>Excit</String>
+      <String>Excit</String>
       <String>Excit</String>
       <String>Acq</String>
       <String>FilterOff</String>
@@ -184,24 +188,28 @@
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script Pirenea2Excits1Acq4s
+    <Script_Text type='String'>script PireneaFree1sNoLaser
    wait until scriptTrigger0 
    wait 949940
-   generate AutLaserOn
+   generate AutLaserOff
    wait 49000
-   generate AutLaserOnFilterOff
+   generate FilterOff
    wait 1000
    wait 600
-   generate AutLaserOnFilterOffTrapStart
+   generate FilterOffTrapStart
    wait 300
-   generate AutLaserOnFilterOffTrapStop
+   generate FilterOffTrapStop
    wait 2000
-   generate AutLaserOnFilterOn
+   generate FilterOn
    wait 47100
    generate AutLaserOff
-   wait 3950000
+   wait 950000
    generate Excit
-   wait 1200
+   wait 3000
+   generate Excit
+   wait 3000
+   generate Excit
+   wait 3000
    generate Acq
    wait 1000000
    generate FilterOff
@@ -216,7 +224,7 @@ end script
   </TIMING_Inputs>
   <PROCESSING_Inputs mems='3'>
     <Reference_Mass type='DBL'>300.0939</Reference_Mass>
-    <Cyclotron_Freq type='DBL'>255.692</Cyclotron_Freq>
+    <Cyclotron_Freq type='DBL'>255.727</Cyclotron_Freq>
     <Magnetron_Freq type='DBL'>0.001</Magnetron_Freq>
   </PROCESSING_Inputs>
   <SOFTWARE_Inputs mems='16'>
@@ -266,21 +274,45 @@ end script
     <Trigger_Source type='String'>PFI0</Trigger_Source>
   </HSDIO_6541_Inputs>
   <EXCIT_Table mems='4'>
-    <Number_of_Excits type='U16'>1</Number_of_Excits>
-    <Number_of_Ejects type='U16'>1</Number_of_Ejects>
+    <Number_of_Excits type='U16'>3</Number_of_Excits>
+    <Number_of_Ejects type='U16'>0</Number_of_Ejects>
     <Sampling_Frequency type='DBL'>20</Sampling_Frequency>
-    <Waveforms_Table dim='[1,12]' type='String'>
+    <Waveforms_Table dim='[3,12]' type='String'>
       <String>Excit1</String>
       <String>E1</String>
       <String>Swift</String>
-      <String>0.5</String>
-      <String>6000</String>
-      <String>24</String>
-      <String>305.33</String>
-      <String>354.10</String>
-      <String>0.0</String>
-      <String>0.0</String>
-      <String>0.0</String>
+      <String>0.6</String>
+      <String>800</String>
+      <String>50</String>
+      <String>255.00</String>
+      <String>600.00</String>
+      <String>0</String>
+      <String>0</String>
+      <String>0</String>
+      <String>20</String>
+      <String>Excit2</String>
+      <String>E2</String>
+      <String>Swift</String>
+      <String>0.6</String>
+      <String>800</String>
+      <String>50</String>
+      <String>255.00</String>
+      <String>600.00</String>
+      <String>0</String>
+      <String>0</String>
+      <String>0</String>
+      <String>20</String>
+      <String>Excit3</String>
+      <String>E3</String>
+      <String>Swift</String>
+      <String>0.7</String>
+      <String>800</String>
+      <String>50</String>
+      <String>255.00</String>
+      <String>600.00</String>
+      <String>0</String>
+      <String>0</String>
+      <String>0</String>
       <String>20</String>
     </Waveforms_Table>
   </EXCIT_Table>
