@@ -3,7 +3,7 @@
   <XML_Version type='Version'>1.3</XML_Version>
   <SPECTRUM mems='6'>
     <Day_Path type='Path'>D:\PIRENEA\DATA\2018\data_2018_12_04</Day_Path>
-    <Spectrum_Name type='String'>P2_2018_12_04_005.A00</Spectrum_Name>
+    <Spectrum_Name type='String'>P1_2018_12_04_078.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
@@ -11,9 +11,12 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>04/12/2018 16:57:52.769</Date>
+    <Date type='String'>04/12/2018 17:53:44.318</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Free 1s No Laser</Comment>
+    <Comment type='String'>Test to be DELETED.
+3 acqs
+3 excits
+</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -27,7 +30,7 @@
     <Laser_1 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Ablation Surelite I</Name>
-      <Wavelength type='DBL'>1000</Wavelength>
+      <Wavelength type='DBL'>266</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_1>
     <Laser_2 mems='4'>
@@ -155,11 +158,11 @@
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>3</Number_of_Excitations>
-    <Script_Text type='String'>script  excit3wfm    wait until scriptTrigger0    generate E1Swift0p6f255p00to600p00a50d800fs20    wait until scriptTrigger0    generate E2Swift0p6f255p00to600p00a50d800fs20    wait until scriptTrigger0    generate E3Swift0p7f255p00to600p00a50d800fs20end script</Script_Text>
+    <Script_Text type='String'>script  excit3wfm    wait until scriptTrigger0    generate E1Swift0p5f150p00to550p00a70d1200fs20    wait until scriptTrigger0    generate E2Swift0p5f150p00to550p00a70d1200fs20    wait until scriptTrigger0    generate E3Swift0p6f150p00to550p00a70d1200fs20end script</Script_Text>
     <Table_of_Waveforms dim='[3]' type='String'>
-      <String>E1Swift0p6f255p00to600p00a50d800fs20</String>
-      <String>E2Swift0p6f255p00to600p00a50d800fs20</String>
-      <String>E3Swift0p7f255p00to600p00a50d800fs20</String>
+      <String>E1Swift0p5f150p00to550p00a70d1200fs20</String>
+      <String>E2Swift0p5f150p00to550p00a70d1200fs20</String>
+      <String>E3Swift0p6f150p00to550p00a70d1200fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
@@ -170,47 +173,53 @@
     <Acquisition_Duration type='DBL'>262</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
-    <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
+    <Number_of_Acquisitions_ type='I16'>3</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[14]' type='String'>
+    <Table_of_Waveforms dim='[16]' type='String'>
+      <String>AutLaserOn</String>
+      <String>AutLaserOnFilterOff</String>
+      <String>AutLaserOnFilterOffTrapStart</String>
+      <String>AutLaserOnFilterOffTrapStop</String>
+      <String>AutLaserOnFilterOn</String>
       <String>AutLaserOff</String>
-      <String>FilterOff</String>
-      <String>FilterOffTrapStart</String>
-      <String>FilterOffTrapStop</String>
-      <String>FilterOn</String>
-      <String>AutLaserOff</String>
-      <String>Excit</String>
-      <String>Excit</String>
-      <String>Excit</String>
-      <String>Acq</String>
+      <String>Excit1</String>
+      <String>Acq1</String>
+      <String>Excit2</String>
+      <String>Acq2</String>
+      <String>Excit3</String>
+      <String>Acq2</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PireneaFree1sNoLaser
+    <Script_Text type='String'>script Coronene
    wait until scriptTrigger0 
    wait 949940
-   generate AutLaserOff
+   generate AutLaserOn
    wait 49000
-   generate FilterOff
+   generate AutLaserOnFilterOff
    wait 1000
-   wait 600
-   generate FilterOffTrapStart
+   wait 400
+   generate AutLaserOnFilterOffTrapStart
    wait 300
-   generate FilterOffTrapStop
+   generate AutLaserOnFilterOffTrapStop
    wait 2000
-   generate FilterOn
+   generate AutLaserOnFilterOn
    wait 47100
    generate AutLaserOff
-   wait 950000
-   generate Excit
-   wait 3000
-   generate Excit
-   wait 3000
-   generate Excit
-   wait 3000
-   generate Acq
+   wait 3950000
+   generate Excit1
+    wait 10000
+   generate Acq1
+   wait 1000000
+   generate Excit2
+   wait 1200
+   generate Acq2
+   wait 1000000
+   generate Excit3
+   wait 1200
+   generate Acq2
    wait 1000000
    generate FilterOff
    wait 1000
@@ -224,12 +233,12 @@ end script
   </TIMING_Inputs>
   <PROCESSING_Inputs mems='3'>
     <Reference_Mass type='DBL'>300.0939</Reference_Mass>
-    <Cyclotron_Freq type='DBL'>255.727</Cyclotron_Freq>
+    <Cyclotron_Freq type='DBL'>255.692</Cyclotron_Freq>
     <Magnetron_Freq type='DBL'>0.001</Magnetron_Freq>
   </PROCESSING_Inputs>
   <SOFTWARE_Inputs mems='16'>
     <Application_Directory type='Path'>D:\S.O.F.T.S\LABVIEW\PIL</Application_Directory>
-    <Software_Version type='String'>17.0</Software_Version>
+    <Software_Version type='String'>17.0f2</Software_Version>
     <Data_Path type='Path'>D:\PIRENEA\DATA</Data_Path>
     <XML_Path type='Path'>D:\PIRENEA\DATA</XML_Path>
     <XML_File_Filter type='String'>*.xml</XML_File_Filter>
@@ -281,11 +290,11 @@ end script
       <String>Excit1</String>
       <String>E1</String>
       <String>Swift</String>
-      <String>0.6</String>
-      <String>800</String>
-      <String>50</String>
-      <String>255.00</String>
-      <String>600.00</String>
+      <String>0.5</String>
+      <String>1200</String>
+      <String>70</String>
+      <String>150.00</String>
+      <String>550.00</String>
       <String>0</String>
       <String>0</String>
       <String>0</String>
@@ -293,26 +302,26 @@ end script
       <String>Excit2</String>
       <String>E2</String>
       <String>Swift</String>
-      <String>0.6</String>
-      <String>800</String>
-      <String>50</String>
-      <String>255.00</String>
-      <String>600.00</String>
+      <String>0.5</String>
+      <String>1200</String>
+      <String>70</String>
+      <String>150.00</String>
+      <String>550.00</String>
       <String>0</String>
       <String>0</String>
       <String>0</String>
       <String>20</String>
       <String>Excit3</String>
-      <String>E3</String>
+      <String>E1</String>
       <String>Swift</String>
-      <String>0.7</String>
-      <String>800</String>
-      <String>50</String>
-      <String>255.00</String>
-      <String>600.00</String>
-      <String>0</String>
-      <String>0</String>
-      <String>0</String>
+      <String>0.6</String>
+      <String>1200</String>
+      <String>70</String>
+      <String>150.00</String>
+      <String>550.00</String>
+      <String>0.0</String>
+      <String>0.0</String>
+      <String>0.0</String>
       <String>20</String>
     </Waveforms_Table>
   </EXCIT_Table>
