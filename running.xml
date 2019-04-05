@@ -2,25 +2,26 @@
 <GXML_Root>
   <XML_Version type='Version'>1.3</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PIRENEA\DATA\2019\data_2019_03_14</Day_Path>
-    <Spectrum_Name type='String'>P1_2019_03_14_020.A00</Spectrum_Name>
-    <Accumulated type='Bool'>TRUE</Accumulated>
+    <Day_Path type='Path'>D:\PIRENEA\DATA\2019\data_2019_04_04</Day_Path>
+    <Spectrum_Name type='String'>P1_2019_04_04_005.A00</Spectrum_Name>
+    <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
     <Quality_Flag type='String'>Optimal</Quality_Flag>
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>01/04/2019 17:30:55,259</Date>
+    <Date type='String'>05/04/2019 17:15:26,329</Date>
     <User_Name type='String'>Gabi WENZEL</User_Name>
     <Comment type='String'>Test ions.
 Distance focale entre lentilles : 115 mm
-angle 44&amp;#176;
+angle 36.5&amp;#176;
 
-OPO = 460 nm 
+no OPO = 460 nm = 9.6mJ
 
-no NDYAG = 266nm = 30 mW
-</Comment>
+no NDYAG = 266nm = 15.6mJ
+
+no Xe Lamp = 495nm block, time=2sec</Comment>
     <Experiment_Procedures dim='[2]' type='String'>
       <Name>Dissociation CID</Name>
       <Name></Name>
@@ -180,8 +181,8 @@ no NDYAG = 266nm = 30 mW
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>10</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[19]' type='String'>
+    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
+    <Table_of_Waveforms dim='[17]' type='String'>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
       <String>AutLaserOnFilterOffTrapStart</String>
@@ -193,8 +194,6 @@ no NDYAG = 266nm = 30 mW
       <String>GasOff</String>
       <String>Gas1On</String>
       <String>GasOff</String>
-      <String>Laser3On</String>
-      <String>LaserOff</String>
       <String>Excit</String>
       <String>Acq</String>
       <String>FilterOff</String>
@@ -229,13 +228,6 @@ no NDYAG = 266nm = 30 mW
    wait 250000
    generate GasOff
    wait 10000000
-   repeat 3
-   generate Laser3On
-   wait 100000
-   generate LaserOff
-   wait 3000000
-   end repeat
-   wait 12000000
    generate Excit
    wait 1200
    generate Acq
