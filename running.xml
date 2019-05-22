@@ -11,7 +11,7 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>01/04/2019 17:30:55,259</Date>
+    <Date type='String'>03/04/2019 12:23:05,852</Date>
     <User_Name type='String'>Gabi WENZEL</User_Name>
     <Comment type='String'>Test ions.
 Distance focale entre lentilles : 115 mm
@@ -27,12 +27,12 @@ no NDYAG = 266nm = 30 mW
     </Experiment_Procedures>
     <Chemical_Source type='String'>PAH</Chemical_Source>
     <Sample_Components dim='[2]' type='String'>
-      <Name>C60</Name>
-      <Name>Phenanthrene</Name>
+      <Name></Name>
+      <Name></Name>
     </Sample_Components>
     <Species dim='[2]' type='String'>
-      <Name>C60</Name>
-      <Name>Phenanthrene</Name>
+      <Name></Name>
+      <Name></Name>
     </Species>
     <Laser_1 mems='4'>
       <Used type='Bool'>TRUE</Used>
@@ -256,7 +256,7 @@ end script
     <Magnetron_Freq type='DBL'>0</Magnetron_Freq>
   </PROCESSING_Inputs>
   <SOFTWARE_Inputs mems='16'>
-    <Application_Directory type='Path'>D:\S.O.F.T.S\PIRENEA\LABVIEW\PIL</Application_Directory>
+    <Application_Directory type='Path'>D:\S.O.F.T.S\LABVIEW\PIL</Application_Directory>
     <Software_Version type='String'>18.0</Software_Version>
     <Data_Path type='Path'>D:\PIRENEA\DATA</Data_Path>
     <XML_Path type='Path'>D:\PIRENEA\DATA</XML_Path>
