@@ -1,0 +1,18 @@
+script PIRENEA_NO_ION_ACCUM
+   wait until scriptTrigger0
+   wait HSDIO_DELAY
+   repeat NUMBER_OF_REFILLS
+      generate AutLaserOn
+      wait SHUTTER_DURATION_BEFORE
+      generate AutLaserOnFilterOff
+      wait FILTER_TAU
+      wait TRAPPING_DELAY
+      generate AutLaserOnFilterOffTrapStart
+      wait TRAPPING_DURATION
+      generate AutLaserOnFilterOffTrapStop
+      wait FILTER_TAU
+      generate AutLaserOnFilterOn
+      wait SHUTTER_DURATION_AFTER
+      generate AutLaserOff
+      wait UNTIL_NEXT_REPEAT
+   end repeat

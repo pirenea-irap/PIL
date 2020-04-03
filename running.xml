@@ -11,13 +11,13 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>26/03/2020 19:55:18.018</Date>
+    <Date type='String'>03/04/2020 15:50:34.907</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>To be deleted</Comment>
+    <Comment type='String'>To be deleted.</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
-    <Chemical_Source type='String'>Other</Chemical_Source>
+    <Chemical_Source type='String'>PAH</Chemical_Source>
     <Sample_Components dim='[1]' type='String'>
       <Name>Other</Name>
     </Sample_Components>
@@ -177,7 +177,7 @@
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
+    <Number_of_Accumulations type='I16'>2</Number_of_Accumulations>
     <Table_of_Waveforms dim='[12]' type='String'>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
@@ -194,20 +194,22 @@
     </Table_of_Waveforms>
     <Script_Text type='String'>script Coronene
    wait until scriptTrigger0 
-   wait 949940
-   generate AutLaserOn
-   wait 500
-   generate AutLaserOnFilterOff
-   wait 1000
-   wait 400
-   generate AutLaserOnFilterOffTrapStart
-   wait 300
-   generate AutLaserOnFilterOffTrapStop
-   wait 2000
-   generate AutLaserOnFilterOn
-   wait 500
-   generate AutLaserOff
-   wait 500
+   wait 948940
+   repeat 1
+      generate AutLaserOn
+      wait 50000
+      generate AutLaserOnFilterOff
+      wait 1000
+      wait 400
+      generate AutLaserOnFilterOffTrapStart
+      wait 300
+      generate AutLaserOnFilterOffTrapStop
+      wait 2000
+      generate AutLaserOnFilterOn
+      wait 500
+      generate AutLaserOff
+      wait 500
+   end repeat
    generate Excit1
    wait 2500
    generate Acq
