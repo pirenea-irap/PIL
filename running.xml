@@ -11,7 +11,7 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>15/04/2020 16:17:53.594</Date>
+    <Date type='String'>17/04/2020 17:33:38.679</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>To be deleted for sure.</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
@@ -192,36 +192,36 @@
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script Coronene
-   wait until scriptTrigger0 
-   wait 948940
-   repeat 1
-      generate AutLaserOn
-      wait 50000
-      generate AutLaserOnFilterOff
-      wait 1000
-      wait 400
-      generate AutLaserOnFilterOffTrapStart
-      wait 300
-      generate AutLaserOnFilterOffTrapStop
-      wait 2000
-      generate AutLaserOnFilterOn
-      wait 500
-      generate AutLaserOff
-      wait 500
-   end repeat
-   generate Excit1
-   wait 2500
-   generate Acq
-   wait 1000000
-   generate FilterOff
-   wait 1000
-   generate FilterOffEmptyingStart
-   wait 1000000
-   generate FilterOffEmptyingStop
-   wait 2000
-   generate Zeros
-end script
+    <Script_Text type='String'>script Test
+		   wait until scriptTrigger0
+		   wait 948940
+		   repeat 2
+		      generate AutLaserOn
+		      wait 50000
+		      generate AutLaserOnFilterOff
+		      wait 1000
+		      wait 400
+		      generate AutLaserOnFilterOffTrapStart
+		      wait 300
+		      generate AutLaserOnFilterOffTrapStop
+		      wait 2000
+		      generate AutLaserOnFilterOn
+		      wait 500
+		      generate AutLaserOff
+		      wait 500
+		   end repeat
+		   generate Excit1
+		   wait 2500
+		   generate Acq
+		   wait 1000000
+		   generate FilterOff
+		   wait 1000
+		   generate FilterOffEmptyingStart
+		   wait 1000000
+		   generate FilterOffEmptyingStop
+		   wait 2000
+		   generate Zeros
+		end script
 </Script_Text>
   </TIMING_Inputs>
   <PROCESSING_Inputs mems='3'>
@@ -295,8 +295,9 @@ end script
     </Waveforms_Table>
   </EXCIT_Table>
   <TIMING_Table mems='3'>
-    <Mandatory_Items mems='8'>
+    <Mandatory_Items mems='9'>
       <Script_Name type='String'></Script_Name>
+      <GINI_Time_Period type='DBL'>1000000</GINI_Time_Period>
       <HSDIO_Delay type='DBL'>60</HSDIO_Delay>
       <Shutter_Duration_before type='DBL'>50</Shutter_Duration_before>
       <Shutter_Duration_after type='DBL'>50</Shutter_Duration_after>
