@@ -2,22 +2,23 @@
 <GXML_Root>
   <XML_Version type='Version'>1.4</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PIRENEA\DATA\2018\data_2018_12_07</Day_Path>
-    <Spectrum_Name type='String'>P1_2018_12_07_061.A00</Spectrum_Name>
+    <Day_Path type='Path'>D:\PILAB\DATA\2020\data_2020_01_20</Day_Path>
+    <Spectrum_Name type='String'>P2_2020_01_20_001.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
     <Quality_Flag type='String'>Optimal</Quality_Flag>
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
-    <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>17/04/2020 17:33:38.679</Date>
-    <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>To be deleted for sure.</Comment>
+    <Setup type='String'>PILAB</Setup>
+    <Date type='String'>05/10/2020 16:27:35.387</Date>
+    <User_Name type='String'>Anthony BONNAMY</User_Name>
+    <Comment type='String'>Premier test chassis
+</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
-    <Chemical_Source type='String'>PAH</Chemical_Source>
+    <Chemical_Source type='String'>Other</Chemical_Source>
     <Sample_Components dim='[1]' type='String'>
       <Name>Other</Name>
     </Sample_Components>
@@ -122,7 +123,7 @@
     <Number_of_Channels type='I32'>4</Number_of_Channels>
     <Init_Values dim='[4]' type='DBL'>
       <Numeric>2</Numeric>
-      <Numeric>9</Numeric>
+      <Numeric>3</Numeric>
       <Numeric>2</Numeric>
       <Numeric>9</Numeric>
     </Init_Values>
@@ -163,21 +164,21 @@
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f150p00to550p00a90d1200fs20end script</Script_Text>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f600p00to1200p00a100d1200fs20end script</Script_Text>
     <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1Swift0p5f150p00to550p00a90d1200fs20</String>
+      <String>E1Swift0p5f600p00to1200p00a100d1200fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>500000</Record_Length>
-    <Sample_Rate type='DBL'>5000000</Sample_Rate>
+    <Record_Length type='I32'>5000000</Record_Length>
+    <Sample_Rate type='DBL'>2.5E+7</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
-    <Vertical_Range type='DBL'>0.4</Vertical_Range>
-    <Acquisition_Duration type='DBL'>100</Acquisition_Duration>
+    <Vertical_Range type='DBL'>4</Vertical_Range>
+    <Acquisition_Duration type='DBL'>200</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>2</Number_of_Accumulations>
+    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
     <Table_of_Waveforms dim='[12]' type='String'>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
@@ -192,36 +193,34 @@
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script Test
-		   wait until scriptTrigger0
-		   wait 948940
-		   repeat 2
-		      generate AutLaserOn
-		      wait 50000
-		      generate AutLaserOnFilterOff
-		      wait 1000
-		      wait 400
-		      generate AutLaserOnFilterOffTrapStart
-		      wait 300
-		      generate AutLaserOnFilterOffTrapStop
-		      wait 2000
-		      generate AutLaserOnFilterOn
-		      wait 500
-		      generate AutLaserOff
-		      wait 500
-		   end repeat
-		   generate Excit1
-		   wait 2500
-		   generate Acq
-		   wait 1000000
-		   generate FilterOff
-		   wait 1000
-		   generate FilterOffEmptyingStart
-		   wait 1000000
-		   generate FilterOffEmptyingStop
-		   wait 2000
-		   generate Zeros
-		end script
+    <Script_Text type='String'>script TolueneOdile
+   wait until scriptTrigger0 
+   wait 949940
+   generate AutLaserOn
+   wait 500
+   generate AutLaserOnFilterOff
+   wait 1000
+   wait 400
+   generate AutLaserOnFilterOffTrapStart
+   wait 300
+   generate AutLaserOnFilterOffTrapStop
+   wait 2000
+   generate AutLaserOnFilterOn
+   wait 500
+   generate AutLaserOff
+   wait 50000
+  generate Excit1
+  wait 1200
+   generate Acq
+   wait 1000000
+  generate FilterOff
+   wait 1000
+   generate FilterOffEmptyingStart
+   wait 1000000
+   generate FilterOffEmptyingStop
+   wait 2000
+   generate Zeros
+end script
 </Script_Text>
   </TIMING_Inputs>
   <PROCESSING_Inputs mems='3'>
@@ -231,20 +230,20 @@
   </PROCESSING_Inputs>
   <SOFTWARE_Inputs mems='16'>
     <Application_Directory type='Path'>D:\S.O.F.T.S\LABVIEW\PIL</Application_Directory>
-    <Software_Version type='String'>18.0</Software_Version>
-    <Data_Path type='Path'>D:\PIRENEA\DATA</Data_Path>
-    <XML_Path type='Path'>D:\PIRENEA\DATA</XML_Path>
+    <Software_Version type='String'>18.0f2</Software_Version>
+    <Data_Path type='Path'>D:\PILAB\DATA</Data_Path>
+    <XML_Path type='Path'>D:\PILAB\DATA</XML_Path>
     <XML_File_Filter type='String'>*.xml</XML_File_Filter>
-    <XML_Saved_Path type='Path'>D:\PIRENEA\SAVED_XML</XML_Saved_Path>
-    <Excit_Scripts_Path type='Path'>D:\PIRENEA\TECHNICAL\EXCIT_SCRIPTS</Excit_Scripts_Path>
+    <XML_Saved_Path type='Path'>D:\PILAB\SAVED_XML</XML_Saved_Path>
+    <Excit_Scripts_Path type='Path'>D:\PILAB\TECHNICAL\EXCIT_SCRIPTS</Excit_Scripts_Path>
     <Excit_Scripts_File_Filter type='String'>*.txt</Excit_Scripts_File_Filter>
-    <Excit_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\EXCIT_WFMS</Excit_Waveforms_Path>
+    <Excit_Waveforms_Path type='Path'>D:\PILAB\TECHNICAL\EXCIT_WFMS</Excit_Waveforms_Path>
     <Excit_Waveforms_File_Filter type='String'>*.bin</Excit_Waveforms_File_Filter>
-    <Timing_Scripts_Path type='Path'>D:\PIRENEA\TECHNICAL\TIMING_SCRIPTS</Timing_Scripts_Path>
+    <Timing_Scripts_Path type='Path'>D:\PILAB\TECHNICAL\TIMING_SCRIPTS</Timing_Scripts_Path>
     <Timing_Scripts_File_Filter type='String'>*.txt</Timing_Scripts_File_Filter>
-    <Timing_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\TIMING_WFMS</Timing_Waveforms_Path>
+    <Timing_Waveforms_Path type='Path'>D:\PILAB\TECHNICAL\TIMING_WFMS</Timing_Waveforms_Path>
     <Timing_Waveforms_File_Filter type='String'>*.bin</Timing_Waveforms_File_Filter>
-    <Trapping_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\TRAPPING_WFMS</Trapping_Waveforms_Path>
+    <Trapping_Waveforms_Path type='Path'>D:\PILAB\TECHNICAL\TRAPPING_WFMS</Trapping_Waveforms_Path>
     <Trapping_Waveforms_File_Filter type='String'>*.bin</Trapping_Waveforms_File_Filter>
   </SOFTWARE_Inputs>
   <AO_6711_Inputs mems='5'>
@@ -277,7 +276,7 @@
   </HSDIO_6541_Inputs>
   <EXCIT_Table mems='4'>
     <Number_of_Excits type='U16'>1</Number_of_Excits>
-    <Number_of_Ejects type='U16'>1</Number_of_Ejects>
+    <Number_of_Ejects type='U16'>0</Number_of_Ejects>
     <Sampling_Frequency type='DBL'>20</Sampling_Frequency>
     <Waveforms_Table dim='[1,12]' type='String'>
       <String>Excit1</String>
@@ -285,19 +284,19 @@
       <String>Swift</String>
       <String>0.5</String>
       <String>1200</String>
-      <String>90</String>
-      <String>150.00</String>
-      <String>550.00</String>
-      <String>0.0</String>
-      <String>0.0</String>
-      <String>0.0</String>
+      <String>100</String>
+      <String>600.00</String>
+      <String>1200.00</String>
+      <String>0</String>
+      <String>0</String>
+      <String>0</String>
       <String>20</String>
     </Waveforms_Table>
   </EXCIT_Table>
   <TIMING_Table mems='3'>
     <Mandatory_Items mems='9'>
       <Script_Name type='String'></Script_Name>
-      <GINI_Time_Period type='DBL'>1000000</GINI_Time_Period>
+      <GINI_Time_Period type='DBL'>100</GINI_Time_Period>
       <HSDIO_Delay type='DBL'>60</HSDIO_Delay>
       <Shutter_Duration_before type='DBL'>50</Shutter_Duration_before>
       <Shutter_Duration_after type='DBL'>50</Shutter_Duration_after>
