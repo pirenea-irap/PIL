@@ -42,6 +42,7 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 			<Property Name="NI.SortType" Type="Int">0</Property>
 		</Item>
+		<Item Name="AO_6711_Test_Ions_Accum_PFI3.vi" Type="VI" URL="/E/01_DOCS/DOCS_6711_AO/TESTS/AO_6711_Test_Ions_Accum_PFI3.vi"/>
 		<Item Name="Global_Variables.vi" Type="VI" URL="../Global_Variables.vi"/>
 		<Item Name="PIL.ini" Type="Document" URL="../PIL.ini"/>
 		<Item Name="PIL_ICR.vi" Type="VI" URL="../PIL_ICR.vi"/>

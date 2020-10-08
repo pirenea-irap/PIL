@@ -11,10 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>05/10/2020 16:27:35.387</Date>
-    <User_Name type='String'>Anthony BONNAMY</User_Name>
-    <Comment type='String'>Premier test chassis
-</Comment>
+    <Date type='String'>08/10/2020 18:41:34.309</Date>
+    <User_Name type='String'>Odile COEUR-JOLY</User_Name>
+    <Comment type='String'>Test Ions accums</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -125,7 +124,7 @@
       <Numeric>2</Numeric>
       <Numeric>3</Numeric>
       <Numeric>2</Numeric>
-      <Numeric>9</Numeric>
+      <Numeric>3</Numeric>
     </Init_Values>
     <Opening_Values dim='[4]' type='DBL'>
       <Numeric>0</Numeric>
@@ -153,20 +152,26 @@
       <String>Adiabatic_None_2_2_2000</String>
       <String>Adiabatic_RC_9_0_2000</String>
     </Adiabatic_Waveforms>
-    <Ions_Accumulation_ON type='Bool'>FALSE</Ions_Accumulation_ON>
-    <Number_of_Ions_Refills type='I32'>1</Number_of_Ions_Refills>
-    <Ions_Opening_Values dim='[0]' type='DBL'>
-      <Numeric></Numeric>
+    <Ions_Accumulation_ON type='Bool'>TRUE</Ions_Accumulation_ON>
+    <Number_of_Ions_Refills type='I32'>100</Number_of_Ions_Refills>
+    <Ions_Opening_Values dim='[4]' type='DBL'>
+      <Numeric>-1</Numeric>
+      <Numeric>-1</Numeric>
+      <Numeric>-1</Numeric>
+      <Numeric>-1</Numeric>
     </Ions_Opening_Values>
-    <Ions_Trapping_Values dim='[0]' type='DBL'>
-      <Numeric></Numeric>
+    <Ions_Trapping_Values dim='[4]' type='DBL'>
+      <Numeric>2</Numeric>
+      <Numeric>6</Numeric>
+      <Numeric>2</Numeric>
+      <Numeric>9</Numeric>
     </Ions_Trapping_Values>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f600p00to1200p00a100d1200fs20end script</Script_Text>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p8f600p00to1200p00a100d1200fs20end script</Script_Text>
     <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1Swift0p5f600p00to1200p00a100d1200fs20</String>
+      <String>E1Swift0p8f600p00to1200p00a100d1200fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
@@ -186,34 +191,36 @@
       <String>AutLaserOnFilterOffTrapStop</String>
       <String>AutLaserOnFilterOn</String>
       <String>AutLaserOff</String>
-      <String>Excit1</String>
+      <String>Excit</String>
       <String>Acq</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script TolueneOdile
-   wait until scriptTrigger0 
-   wait 949940
-   generate AutLaserOn
-   wait 500
-   generate AutLaserOnFilterOff
-   wait 1000
-   wait 400
-   generate AutLaserOnFilterOffTrapStart
-   wait 300
-   generate AutLaserOnFilterOffTrapStop
-   wait 2000
-   generate AutLaserOnFilterOn
-   wait 500
-   generate AutLaserOff
-   wait 50000
-  generate Excit1
-  wait 1200
+    <Script_Text type='String'>script PilabWithIonAccum10Hz
+   wait until scriptTrigger0
+   wait 49940
+   repeat 100
+      generate AutLaserOn
+      wait 49000
+      generate AutLaserOnFilterOff
+      wait 1000
+      wait 400
+      generate AutLaserOnFilterOffTrapStart
+      wait 300
+      generate AutLaserOnFilterOffTrapStop
+      wait 2000
+      generate AutLaserOnFilterOn
+      wait 40000
+      generate AutLaserOff
+      wait 7286
+   end repeat
+   generate Excit
+   wait 1200
    generate Acq
    wait 1000000
-  generate FilterOff
+   generate FilterOff
    wait 1000
    generate FilterOffEmptyingStart
    wait 1000000
@@ -282,7 +289,7 @@ end script
       <String>Excit1</String>
       <String>E1</String>
       <String>Swift</String>
-      <String>0.5</String>
+      <String>0.8</String>
       <String>1200</String>
       <String>100</String>
       <String>600.00</String>
