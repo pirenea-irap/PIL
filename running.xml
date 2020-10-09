@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>08/10/2020 18:41:34.309</Date>
+    <Date type='String'>09/10/2020 17:18:20.926</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Ions accums</Comment>
+    <Comment type='String'>Test Ions accums + RF Guides On</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -122,9 +122,9 @@
     <Number_of_Channels type='I32'>4</Number_of_Channels>
     <Init_Values dim='[4]' type='DBL'>
       <Numeric>2</Numeric>
-      <Numeric>3</Numeric>
+      <Numeric>9</Numeric>
       <Numeric>2</Numeric>
-      <Numeric>3</Numeric>
+      <Numeric>9</Numeric>
     </Init_Values>
     <Opening_Values dim='[4]' type='DBL'>
       <Numeric>0</Numeric>
@@ -153,16 +153,16 @@
       <String>Adiabatic_RC_9_0_2000</String>
     </Adiabatic_Waveforms>
     <Ions_Accumulation_ON type='Bool'>TRUE</Ions_Accumulation_ON>
-    <Number_of_Ions_Refills type='I32'>100</Number_of_Ions_Refills>
+    <Number_of_Ions_Refills type='I32'>50</Number_of_Ions_Refills>
     <Ions_Opening_Values dim='[4]' type='DBL'>
-      <Numeric>-1</Numeric>
-      <Numeric>-1</Numeric>
-      <Numeric>-1</Numeric>
-      <Numeric>-1</Numeric>
+      <Numeric>0</Numeric>
+      <Numeric>0</Numeric>
+      <Numeric>0</Numeric>
+      <Numeric>0</Numeric>
     </Ions_Opening_Values>
     <Ions_Trapping_Values dim='[4]' type='DBL'>
       <Numeric>2</Numeric>
-      <Numeric>6</Numeric>
+      <Numeric>9</Numeric>
       <Numeric>2</Numeric>
       <Numeric>9</Numeric>
     </Ions_Trapping_Values>
@@ -185,12 +185,12 @@
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
     <Table_of_Waveforms dim='[12]' type='String'>
-      <String>AutLaserOn</String>
-      <String>AutLaserOnFilterOff</String>
-      <String>AutLaserOnFilterOffTrapStart</String>
-      <String>AutLaserOnFilterOffTrapStop</String>
-      <String>AutLaserOnFilterOn</String>
-      <String>AutLaserOff</String>
+      <String>GuidesOn</String>
+      <String>FilterOffGuidesOn</String>
+      <String>FilterOffGuidesOnTrapStart</String>
+      <String>FilterOffGuidesOnTrapStop</String>
+      <String>FilterOnGuidesOn</String>
+      <String>GuidesOff</String>
       <String>Excit</String>
       <String>Acq</String>
       <String>FilterOff</String>
@@ -198,24 +198,25 @@
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PilabWithIonAccum10Hz
+    <Script_Text type='String'>script PilabWithIonAccum10HzGuidesON
    wait until scriptTrigger0
+   generate GuidesOn
    wait 49940
-   repeat 100
-      generate AutLaserOn
+   repeat 50
       wait 49000
-      generate AutLaserOnFilterOff
+      generate FilterOffGuidesOn
       wait 1000
       wait 400
-      generate AutLaserOnFilterOffTrapStart
+      generate FilterOffGuidesOnTrapStart
       wait 300
-      generate AutLaserOnFilterOffTrapStop
+      generate FilterOffGuidesOnTrapStop
       wait 2000
-      generate AutLaserOnFilterOn
+      generate FilterOnGuidesOn
       wait 40000
-      generate AutLaserOff
-      wait 7286
+      wait 7290
    end repeat
+   generate GuidesOff
+   wait 5000
    generate Excit
    wait 1200
    generate Acq
