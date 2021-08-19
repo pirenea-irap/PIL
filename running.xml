@@ -2,18 +2,20 @@
 <GXML_Root>
   <XML_Version type='Version'>1.4</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PILAB\DATA\2020\data_2020_10_13</Day_Path>
-    <Spectrum_Name type='String'>P2_2020_10_13_008.A00</Spectrum_Name>
+    <Day_Path type='Path'>D:\PIRENEA\DATA\2021\data_2021_08_17</Day_Path>
+    <Spectrum_Name type='String'>P1_2021_08_17_003.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
     <Quality_Flag type='String'>Optimal</Quality_Flag>
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
-    <Setup type='String'>PILAB</Setup>
-    <Date type='String'>06/11/2020 19:04:47.075</Date>
+    <Setup type='String'>PIRENEA</Setup>
+    <Date type='String'>19/08/2021 14:52:57.909</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Ions Refill 50 + RF Guides On + HSDIO Retrig</Comment>
+    <Comment type='String'>Test with LabVIEW 2020 + 10 refills
+
+</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -25,7 +27,7 @@
       <Name>Other</Name>
     </Species>
     <Laser_1 mems='4'>
-      <Used type='Bool'>FALSE</Used>
+      <Used type='Bool'>TRUE</Used>
       <Name type='String'>Ablation Surelite I</Name>
       <Wavelength type='DBL'>266</Wavelength>
       <Energy type='DBL'>25</Energy>
@@ -129,8 +131,8 @@
     <Opening_Values dim='[4]' type='DBL'>
       <Numeric>0</Numeric>
       <Numeric>0</Numeric>
-      <Numeric>0</Numeric>
-      <Numeric>0</Numeric>
+      <Numeric>2</Numeric>
+      <Numeric>9</Numeric>
     </Opening_Values>
     <Trapping_Values dim='[4]' type='DBL'>
       <Numeric>2</Numeric>
@@ -147,65 +149,65 @@
     <Adiabatic_ON type='Bool'>FALSE</Adiabatic_ON>
     <Adiabatic_Duration type='I32'>200</Adiabatic_Duration>
     <Adiabatic_Waveforms dim='[4]' type='String'>
-      <String>Adiabatic_None_2_2_2000</String>
-      <String>Adiabatic_RC_9_0_2000</String>
-      <String>Adiabatic_None_2_2_2000</String>
-      <String>Adiabatic_RC_9_0_2000</String>
+      <String>Adiabatic_DoubleRamp_2_6_2000</String>
+      <String>Adiabatic_DoubleRamp_9_10_2000</String>
+      <String>Adiabatic_DoubleRamp_2_6_2000</String>
+      <String>Adiabatic_DoubleRamp_9_10_2000</String>
     </Adiabatic_Waveforms>
     <Ions_Refill_ON type='Bool'>TRUE</Ions_Refill_ON>
-    <Number_of_Ions_Refills type='I32'>50</Number_of_Ions_Refills>
+    <Number_of_Ions_Refills type='I32'>10</Number_of_Ions_Refills>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p8f600p00to1200p00a100d1200fs20end script</Script_Text>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1TwoSwift0p5f369p50to377p80a12and381p20to389p50a12d20000fs20end script</Script_Text>
     <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1Swift0p8f600p00to1200p00a100d1200fs20</String>
+      <String>E1TwoSwift0p5f369p50to377p80a12and381p20to389p50a12d20000fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>5000000</Record_Length>
-    <Sample_Rate type='DBL'>2.5E+7</Sample_Rate>
+    <Record_Length type='I32'>750000</Record_Length>
+    <Sample_Rate type='DBL'>5000000</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
     <Vertical_Range type='DBL'>4</Vertical_Range>
-    <Acquisition_Duration type='DBL'>200</Acquisition_Duration>
+    <Acquisition_Duration type='DBL'>150</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
     <Table_of_Waveforms dim='[12]' type='String'>
-      <String>GuidesOn</String>
-      <String>FilterOffGuidesOn</String>
-      <String>FilterOffGuidesOnTrapStart</String>
-      <String>FilterOffGuidesOnTrapStop</String>
-      <String>FilterOnGuidesOn</String>
-      <String>GuidesOff</String>
-      <String>Excit</String>
+      <String>AutLaserOn</String>
+      <String>AutLaserOnFilterOff</String>
+      <String>AutLaserOnFilterOffTrapStart</String>
+      <String>AutLaserOnFilterOffTrapStop</String>
+      <String>AutLaserOnFilterOn</String>
+      <String>AutLaserOff</String>
+      <String>Excit1</String>
       <String>Acq</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PilabRefill50GuidesOnRetrig
+    <Script_Text type='String'>script PireneaRefillwith1Retrig
    wait until scriptTrigger0
-   generate GuidesOn
-   wait 110000
-   repeat 50
-      generate FilterOffGuidesOn
+   repeat 10
+      wait 900000
+      generate AutLaserOn
+      wait 50000
+      generate AutLaserOnFilterOff
       wait 1000
       wait until scriptTrigger0
-      wait 370
-      generate FilterOffGuidesOnTrapStart
+      wait 400
+      generate AutLaserOnFilterOffTrapStart
       wait 300
-      generate FilterOffGuidesOnTrapStop
-      wait 2000
-      generate FilterOnGuidesOn
-      wait 90000
+      generate AutLaserOnFilterOffTrapStop
+      wait 2000 
+      generate AutLaserOnFilterOn
+      wait 45000
+      generate AutLaserOff
   end repeat
-   generate GuidesOff
-   wait 5000
-   generate Excit
-   wait 2
+   wait 1000
+   generate Excit1
    generate Acq
    wait 1000000
    generate FilterOff
@@ -225,20 +227,20 @@ end script
   </PROCESSING_Inputs>
   <SOFTWARE_Inputs mems='16'>
     <Application_Directory type='Path'>D:\S.O.F.T.S\LABVIEW\PIL</Application_Directory>
-    <Software_Version type='String'>18.0f2</Software_Version>
-    <Data_Path type='Path'>D:\PILAB\DATA</Data_Path>
-    <XML_Path type='Path'>D:\PILAB\DATA</XML_Path>
+    <Software_Version type='String'>20.0.1</Software_Version>
+    <Data_Path type='Path'>D:\PIRENEA\DATA</Data_Path>
+    <XML_Path type='Path'>D:\PIRENEA\DATA</XML_Path>
     <XML_File_Filter type='String'>*.xml</XML_File_Filter>
-    <XML_Saved_Path type='Path'>D:\PILAB\SAVED_XML</XML_Saved_Path>
-    <Excit_Scripts_Path type='Path'>D:\PILAB\TECHNICAL\EXCIT_SCRIPTS</Excit_Scripts_Path>
+    <XML_Saved_Path type='Path'>D:\PIRENEA\SAVED_XML</XML_Saved_Path>
+    <Excit_Scripts_Path type='Path'>D:\PIRENEA\TECHNICAL\EXCIT_SCRIPTS</Excit_Scripts_Path>
     <Excit_Scripts_File_Filter type='String'>*.txt</Excit_Scripts_File_Filter>
-    <Excit_Waveforms_Path type='Path'>D:\PILAB\TECHNICAL\EXCIT_WFMS</Excit_Waveforms_Path>
+    <Excit_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\EXCIT_WFMS</Excit_Waveforms_Path>
     <Excit_Waveforms_File_Filter type='String'>*.bin</Excit_Waveforms_File_Filter>
-    <Timing_Scripts_Path type='Path'>D:\PILAB\TECHNICAL\TIMING_SCRIPTS</Timing_Scripts_Path>
+    <Timing_Scripts_Path type='Path'>D:\PIRENEA\TECHNICAL\TIMING_SCRIPTS</Timing_Scripts_Path>
     <Timing_Scripts_File_Filter type='String'>*.txt</Timing_Scripts_File_Filter>
-    <Timing_Waveforms_Path type='Path'>D:\PILAB\TECHNICAL\TIMING_WFMS</Timing_Waveforms_Path>
+    <Timing_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\TIMING_WFMS</Timing_Waveforms_Path>
     <Timing_Waveforms_File_Filter type='String'>*.bin</Timing_Waveforms_File_Filter>
-    <Trapping_Waveforms_Path type='Path'>D:\PILAB\TECHNICAL\TRAPPING_WFMS</Trapping_Waveforms_Path>
+    <Trapping_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\TRAPPING_WFMS</Trapping_Waveforms_Path>
     <Trapping_Waveforms_File_Filter type='String'>*.bin</Trapping_Waveforms_File_Filter>
   </SOFTWARE_Inputs>
   <AO_6711_Inputs mems='5'>
@@ -271,20 +273,20 @@ end script
   </HSDIO_6541_Inputs>
   <EXCIT_Table mems='4'>
     <Number_of_Excits type='U16'>1</Number_of_Excits>
-    <Number_of_Ejects type='U16'>0</Number_of_Ejects>
+    <Number_of_Ejects type='U16'>1</Number_of_Ejects>
     <Sampling_Frequency type='DBL'>20</Sampling_Frequency>
     <Waveforms_Table dim='[1,12]' type='String'>
-      <String>Excit1</String>
+      <String>Eject1</String>
       <String>E1</String>
-      <String>Swift</String>
-      <String>0.8</String>
-      <String>1200</String>
-      <String>100</String>
-      <String>600.00</String>
-      <String>1200.00</String>
-      <String>0</String>
-      <String>0</String>
-      <String>0</String>
+      <String>TwoSwift</String>
+      <String>0.5</String>
+      <String>20000</String>
+      <String>12</String>
+      <String>369.50</String>
+      <String>377.80</String>
+      <String>12</String>
+      <String>381.20</String>
+      <String>389.50</String>
       <String>20</String>
     </Waveforms_Table>
   </EXCIT_Table>
