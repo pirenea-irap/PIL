@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>24/09/2021 19:23:12.838</Date>
+    <Date type='String'>27/09/2021 17:06:02.325</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test with 2 loops</Comment>
+    <Comment type='String'>Test with 3 loops</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -27,7 +27,7 @@
     <Laser_1 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Ablation Surelite I</Name>
-      <Wavelength type='DBL'>266</Wavelength>
+      <Wavelength type='DBL'>230</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_1>
     <Laser_2 mems='4'>
@@ -37,9 +37,9 @@
       <Energy type='DBL'>25</Energy>
     </Laser_2>
     <Laser_3 mems='4'>
-      <Used type='Bool'>FALSE</Used>
+      <Used type='Bool'>TRUE</Used>
       <Name type='String'>Panther Ex OPO</Name>
-      <Wavelength type='DBL'>1000</Wavelength>
+      <Wavelength type='DBL'>240</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_3>
     <Laser_4 mems='4'>
