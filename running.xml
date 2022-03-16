@@ -2,18 +2,22 @@
 <GXML_Root>
   <XML_Version type='Version'>1.4</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PIRENEA\DATA\2021\data_2021_09_24</Day_Path>
-    <Spectrum_Name type='String'>P1_2021_09_24_017.A00</Spectrum_Name>
-    <Accumulated type='Bool'>TRUE</Accumulated>
+    <Day_Path type='Path'>D:\PIRENEA\DATA\2021\data_2021_08_19</Day_Path>
+    <Spectrum_Name type='String'>P1_2021_08_19_005.A00</Spectrum_Name>
+    <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
     <Quality_Flag type='String'>Optimal</Quality_Flag>
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>27/09/2021 17:06:02.325</Date>
+    <Date type='String'>16/03/2022 15:48:59.379</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test with 3 loops</Comment>
+    <Comment type='String'>Test with LabVIEW 2020
+- 4 ion refills
+- test 2 OPO loops
+
+</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -27,7 +31,7 @@
     <Laser_1 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Ablation Surelite I</Name>
-      <Wavelength type='DBL'>230</Wavelength>
+      <Wavelength type='DBL'>266</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_1>
     <Laser_2 mems='4'>
@@ -39,7 +43,7 @@
     <Laser_3 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Panther Ex OPO</Name>
-      <Wavelength type='DBL'>240</Wavelength>
+      <Wavelength type='DBL'>270</Wavelength>
       <Energy type='DBL'>25</Energy>
     </Laser_3>
     <Laser_4 mems='4'>
@@ -95,11 +99,11 @@
   <VOLTAGES_Inputs mems='6'>
     <Hexa_1 mems='2'>
       <Used type='Bool'>TRUE</Used>
-      <Voltage type='DBL'>0.1</Voltage>
+      <Voltage type='DBL'>0.3</Voltage>
     </Hexa_1>
     <Hexa_2 mems='2'>
       <Used type='Bool'>TRUE</Used>
-      <Voltage type='DBL'>0.2</Voltage>
+      <Voltage type='DBL'>0.4</Voltage>
     </Hexa_2>
     <Hexa_3 mems='2'>
       <Used type='Bool'>TRUE</Used>
@@ -152,8 +156,8 @@
       <String>Adiabatic_DoubleRamp_2_6_2000</String>
       <String>Adiabatic_DoubleRamp_9_10_2000</String>
     </Adiabatic_Waveforms>
-    <Ions_Refill_ON type='Bool'>FALSE</Ions_Refill_ON>
-    <Number_of_Ions_Refills type='I32'>1</Number_of_Ions_Refills>
+    <Ions_Refill_ON type='Bool'>TRUE</Ions_Refill_ON>
+    <Number_of_Ions_Refills type='I32'>4</Number_of_Ions_Refills>
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
@@ -171,7 +175,7 @@
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>2</Number_of_Accumulations>
+    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
     <Table_of_Waveforms dim='[12]' type='String'>
       <String>AutLaserOn</String>
       <String>AutLaserOnFilterOff</String>
@@ -186,21 +190,24 @@
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script Pyrene
-   wait until scriptTrigger0 
-   wait 949940
-   generate AutLaserOn
-   wait 49000
-   generate AutLaserOnFilterOff
-   wait 1150
-   wait 400
-   generate AutLaserOnFilterOffTrapStart
-   wait 300
-   generate AutLaserOnFilterOffTrapStop
-   wait 2000
-   generate AutLaserOnFilterOn
-   wait 47100
-   generate AutLaserOff
+    <Script_Text type='String'>script PireneaRefillwith1Retrig
+   wait until scriptTrigger0
+   repeat 4
+      wait 900000
+      generate AutLaserOn
+      wait 50000
+      generate AutLaserOnFilterOff
+      wait 1000
+      wait until scriptTrigger0
+      wait 400
+      generate AutLaserOnFilterOffTrapStart
+      wait 300
+      generate AutLaserOnFilterOffTrapStop
+      wait 2000 
+      generate AutLaserOnFilterOn
+      wait 45000
+      generate AutLaserOff
+  end repeat
    wait 1000
    generate Excit1
    generate Acq
