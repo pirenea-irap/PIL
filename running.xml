@@ -11,13 +11,37 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>07/04/2022 14:05:18.178</Date>
+    <Date type='String'>07/04/2022 14:55:58.391</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test with LabVIEW 2020
-- Variable Gain = 0.5 filter OFF
-
-
-</Comment>
+    <Comment type='String'>---CID---
+Gas: 
+Tank Pressure: 
+Chamber Pressure: 
+Excitation Gain: 
+---Reactivity Electron---
+Electron Source: 
+Electron Energy: 
+Production Potential: 
+Decceleration Potential: 
+---Reactivity Gas---
+Gas: 
+Tank Pressure: 
+Chamber Pressure: 
+---Reactivity H Source---
+Gas: 
+Tank Pressure: 
+Filament Voltage: 
+---Reactivity Oven---
+Temperature: 
+Molecule: 
+---Photodissociation Lamp---
+Lamp Type: 
+Filter Lambda c: 
+Attenuation: 
+Water Filter: 
+---------------------
+blabla
+bbfdfd</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -41,9 +65,9 @@
       <Energy type='DBL'>25</Energy>
     </Laser_2>
     <Laser_3 mems='4'>
-      <Used type='Bool'>FALSE</Used>
+      <Used type='Bool'>TRUE</Used>
       <Name type='String'>Panther Ex OPO</Name>
-      <Wavelength type='DBL'>0</Wavelength>
+      <Wavelength type='DBL'>240</Wavelength>
       <Energy type='DBL'>0</Energy>
     </Laser_3>
     <Laser_4 mems='4'>
