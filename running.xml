@@ -2,8 +2,8 @@
 <GXML_Root>
   <XML_Version type='Version'>1.4</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PIRENEA\DATA\2021\data_2021_08_19</Day_Path>
-    <Spectrum_Name type='String'>P1_2021_08_19_005.A00</Spectrum_Name>
+    <Day_Path type='Path'>D:\PIRENEA\DATA\2022\data_2022_03_22</Day_Path>
+    <Spectrum_Name type='String'>P1_2022_03_22_001.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
@@ -11,11 +11,11 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>22/03/2022 16:29:12.417</Date>
+    <Date type='String'>07/04/2022 14:05:18.178</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>Test with LabVIEW 2020
-- no ion refill
-- 3 OPO
+- Variable Gain = 0.5 filter OFF
+
 
 </Comment>
     <Experiment_Procedures dim='[1]' type='String'>
@@ -41,9 +41,9 @@
       <Energy type='DBL'>25</Energy>
     </Laser_2>
     <Laser_3 mems='4'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>Panther Ex OPO</Name>
-      <Wavelength type='DBL'>240</Wavelength>
+      <Wavelength type='DBL'>0</Wavelength>
       <Energy type='DBL'>0</Energy>
     </Laser_3>
     <Laser_4 mems='4'>
@@ -161,17 +161,17 @@
   </TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1TwoSwift0p5f369p50to377p80a12and381p20to389p50a12d20000fs20end script</Script_Text>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1TwoSwift0p5f369p50to377p80a10and381p20to389p50a10d20000fs20end script</Script_Text>
     <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1TwoSwift0p5f369p50to377p80a12and381p20to389p50a12d20000fs20</String>
+      <String>E1TwoSwift0p5f369p50to377p80a10and381p20to389p50a10d20000fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>750000</Record_Length>
+    <Record_Length type='I32'>500000</Record_Length>
     <Sample_Rate type='DBL'>5000000</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
     <Vertical_Range type='DBL'>4</Vertical_Range>
-    <Acquisition_Duration type='DBL'>150</Acquisition_Duration>
+    <Acquisition_Duration type='DBL'>100</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
@@ -257,8 +257,8 @@ end script
     <Sample_Rate type='DBL'>1E+7</Sample_Rate>
     <Trigger_Type type='U16'>2</Trigger_Type>
     <Trigger_Source type='String'>PFI0</Trigger_Source>
-    <Waveform_Gain type='DBL'>0.31</Waveform_Gain>
-    <Digital_Filter_ON type='Bool'>TRUE</Digital_Filter_ON>
+    <Waveform_Gain type='DBL'>0.5</Waveform_Gain>
+    <Digital_Filter_ON type='Bool'>FALSE</Digital_Filter_ON>
   </AWG_5421_Inputs>
   <DIGIT_5122_Inputs mems='6'>
     <Sample_Rate type='DBL'>5000000</Sample_Rate>
@@ -283,10 +283,10 @@ end script
       <String>TwoSwift</String>
       <String>0.5</String>
       <String>20000</String>
-      <String>12</String>
+      <String>10</String>
       <String>369.50</String>
       <String>377.80</String>
-      <String>12</String>
+      <String>10</String>
       <String>381.20</String>
       <String>389.50</String>
       <String>20</String>
