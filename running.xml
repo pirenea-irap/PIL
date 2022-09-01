@@ -2,8 +2,8 @@
 <GXML_Root>
   <XML_Version type='Version'>1.4</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PIRENEA\DATA\2022\data_2022_03_29</Day_Path>
-    <Spectrum_Name type='String'>P1_2022_03_29_001.A00</Spectrum_Name>
+    <Day_Path type='Path'>D:\PIRENEA\DATA\2022\data_2022_03_22</Day_Path>
+    <Spectrum_Name type='String'>P1_2022_03_22_001.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
@@ -11,11 +11,10 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>19/04/2022 14:58:34.347</Date>
+    <Date type='String'>01/09/2022 15:52:59.140</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>Test with LabVIEW 2020
-- no ion refill
-- OPO is ON
+- 5 OPO , step = 0.5
 
 </Comment>
     <Experiment_Procedures dim='[1]' type='String'>
@@ -43,7 +42,7 @@
     <Laser_3 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Panther Ex OPO</Name>
-      <Wavelength type='DBL'>210</Wavelength>
+      <Wavelength type='DBL'>240</Wavelength>
       <Energy type='DBL'>0</Energy>
     </Laser_3>
     <Laser_4 mems='4'>
@@ -184,7 +183,7 @@
       <String>AutLaserOnFilterOn</String>
       <String>AutLaserOff</String>
       <String>Excit1</String>
-      <String>Acq</String>
+      <String>Acq1</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
@@ -210,7 +209,7 @@
   end repeat
    wait 1000
    generate Excit1
-   generate Acq
+   generate Acq1
    wait 1000000
    generate FilterOff
    wait 1000
