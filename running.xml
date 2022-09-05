@@ -11,11 +11,10 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>01/09/2022 15:52:59.140</Date>
+    <Date type='String'>01/09/2022 17:18:01.091</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>Test with LabVIEW 2020
-- 5 OPO , step = 0.5
-
+- OPO
 </Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
@@ -42,7 +41,7 @@
     <Laser_3 mems='4'>
       <Used type='Bool'>TRUE</Used>
       <Name type='String'>Panther Ex OPO</Name>
-      <Wavelength type='DBL'>240</Wavelength>
+      <Wavelength type='DBL'>231</Wavelength>
       <Energy type='DBL'>0</Energy>
     </Laser_3>
     <Laser_4 mems='4'>

@@ -1,61 +1,8 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="20008000">
 	<Property Name="CCSymbols" Type="Str">useLocaleDecimalPt,False;</Property>
-	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
 	<Property Name="NI.Project.Description" Type="Str"></Property>
-	<Property Name="utf.calculate.project.code.coverage" Type="Bool">true</Property>
-	<Property Name="utf.create.arraybrackets" Type="Str">[]</Property>
-	<Property Name="utf.create.arraythreshold" Type="UInt">100</Property>
-	<Property Name="utf.create.captureinputvalues" Type="Bool">true</Property>
-	<Property Name="utf.create.captureoutputvalues" Type="Bool">true</Property>
-	<Property Name="utf.create.codecoverage.flag" Type="Bool">false</Property>
-	<Property Name="utf.create.codecoverage.value" Type="UInt">100</Property>
-	<Property Name="utf.create.editor.flag" Type="Bool">false</Property>
-	<Property Name="utf.create.editor.path" Type="Path"></Property>
-	<Property Name="utf.create.nameseparator" Type="Str">/</Property>
-	<Property Name="utf.create.precision" Type="UInt">6</Property>
-	<Property Name="utf.create.repetitions" Type="UInt">1</Property>
-	<Property Name="utf.create.testpath.flag" Type="Bool">false</Property>
-	<Property Name="utf.create.testpath.path" Type="Path"></Property>
-	<Property Name="utf.create.timeout.flag" Type="Bool">false</Property>
-	<Property Name="utf.create.timeout.value" Type="UInt">0</Property>
-	<Property Name="utf.create.type" Type="UInt">0</Property>
-	<Property Name="utf.enable.RT.VI.server" Type="Bool">false</Property>
-	<Property Name="utf.passwords" Type="Bin">)!#!!!!!!!)!%%!Q`````Q:4&gt;(*J&lt;G=!!":!1!!"`````Q!!#6"B=X.X&lt;X*E=Q!"!!%!!!!"!!!!#F652E&amp;-4&amp;.516)!!!!!</Property>
-	<Property Name="utf.report.atml.create" Type="Bool">false</Property>
-	<Property Name="utf.report.atml.path" Type="Path">ATML report.xml</Property>
-	<Property Name="utf.report.atml.view" Type="Bool">false</Property>
-	<Property Name="utf.report.details.errors" Type="Bool">false</Property>
-	<Property Name="utf.report.details.failed" Type="Bool">false</Property>
-	<Property Name="utf.report.details.passed" Type="Bool">false</Property>
-	<Property Name="utf.report.errors" Type="Bool">true</Property>
-	<Property Name="utf.report.failed" Type="Bool">true</Property>
-	<Property Name="utf.report.html.create" Type="Bool">false</Property>
-	<Property Name="utf.report.html.path" Type="Path">HTML report.html</Property>
-	<Property Name="utf.report.html.view" Type="Bool">false</Property>
-	<Property Name="utf.report.passed" Type="Bool">true</Property>
-	<Property Name="utf.report.skipped" Type="Bool">true</Property>
-	<Property Name="utf.report.sortby" Type="UInt">1</Property>
-	<Property Name="utf.report.stylesheet.flag" Type="Bool">false</Property>
-	<Property Name="utf.report.stylesheet.path" Type="Path"></Property>
-	<Property Name="utf.report.summary" Type="Bool">true</Property>
-	<Property Name="utf.report.txt.create" Type="Bool">false</Property>
-	<Property Name="utf.report.txt.path" Type="Path">ASCII report.txt</Property>
-	<Property Name="utf.report.txt.view" Type="Bool">false</Property>
-	<Property Name="utf.run.changed.days" Type="UInt">1</Property>
-	<Property Name="utf.run.changed.outdated" Type="Bool">false</Property>
-	<Property Name="utf.run.changed.timestamp" Type="Bin">)!#!!!!!!!%!%%"5!!9*2'&amp;U:3^U;7VF!!%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</Property>
-	<Property Name="utf.run.days.flag" Type="Bool">false</Property>
-	<Property Name="utf.run.includevicallers" Type="Bool">false</Property>
-	<Property Name="utf.run.logfile.flag" Type="Bool">false</Property>
-	<Property Name="utf.run.logfile.overwrite" Type="Bool">false</Property>
-	<Property Name="utf.run.logfile.path" Type="Path">test execution log.txt</Property>
-	<Property Name="utf.run.modified.last.run.flag" Type="Bool">true</Property>
-	<Property Name="utf.run.priority.flag" Type="Bool">false</Property>
-	<Property Name="utf.run.priority.value" Type="UInt">5</Property>
-	<Property Name="utf.run.statusfile.flag" Type="Bool">false</Property>
-	<Property Name="utf.run.statusfile.path" Type="Path">test status log.txt</Property>
-	<Property Name="utf.run.timestamp.flag" Type="Bool">false</Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="IOScan.Faults" Type="Str"></Property>
 		<Property Name="IOScan.NetVarPeriod" Type="UInt">100</Property>
@@ -498,26 +445,26 @@
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/PIL_2022_03_22</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/PIL_2022_09_02</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{163C9F3F-9F83-45B3-8E00-F8DB01A940FA}</Property>
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
 				<Property Name="Bld_supportedLanguage[1]" Type="Str">French</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">2</Property>
-				<Property Name="Bld_version.build" Type="Int">140</Property>
+				<Property Name="Bld_version.build" Type="Int">141</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">10</Property>
 				<Property Name="Destination[0].destName" Type="Str">PIL.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/PIL_2022_03_22/NI_AB_PROJECTNAME.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/PIL_2022_09_02/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Répertoire de support</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/PIL_2022_03_22/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/PIL_2022_09_02/data</Property>
 				<Property Name="Destination[2].destName" Type="Str">resources</Property>
-				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2022_03_22/resources</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2022_09_02/resources</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Source[0].itemID" Type="Str">{8E864210-3877-41D2-8E12-280FC1FBB4C0}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{79D26745-4836-4156-8F04-B7290B8DFF8E}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/PIL_Main.vi</Property>
@@ -533,8 +480,8 @@
 				<Property Name="SourceCount" Type="Int">3</Property>
 				<Property Name="TgtF_companyName" Type="Str">IRAP</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">PIRENEA and PIRENEA-2 LabVIEW software.</Property>
-				<Property Name="TgtF_internalName" Type="Str">PIL v1.14 22/03/2022</Property>
-				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2021 IRAP</Property>
+				<Property Name="TgtF_internalName" Type="Str">PIL v1.15 02/09/2022</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2022 IRAP</Property>
 				<Property Name="TgtF_productName" Type="Str">PIL</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{ED0BDDF1-E310-4993-833A-C5113E10FBB6}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">PIL.exe</Property>
