@@ -445,26 +445,26 @@
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/PIL_2022_09_02</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/PIL_2022_09_05</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{163C9F3F-9F83-45B3-8E00-F8DB01A940FA}</Property>
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
 				<Property Name="Bld_supportedLanguage[1]" Type="Str">French</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">2</Property>
-				<Property Name="Bld_version.build" Type="Int">141</Property>
+				<Property Name="Bld_version.build" Type="Int">142</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">10</Property>
 				<Property Name="Destination[0].destName" Type="Str">PIL.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/PIL_2022_09_02/NI_AB_PROJECTNAME.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/PIL_2022_09_05/NI_AB_PROJECTNAME.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Répertoire de support</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/PIL_2022_09_02/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/PIL_2022_09_05/data</Property>
 				<Property Name="Destination[2].destName" Type="Str">resources</Property>
-				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2022_09_02/resources</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/PIL_2022_09_05/resources</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Source[0].itemID" Type="Str">{79D26745-4836-4156-8F04-B7290B8DFF8E}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{8233C10F-51A8-4981-9AB3-0851E76032D4}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/PIL_Main.vi</Property>
@@ -480,7 +480,7 @@
 				<Property Name="SourceCount" Type="Int">3</Property>
 				<Property Name="TgtF_companyName" Type="Str">IRAP</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">PIRENEA and PIRENEA-2 LabVIEW software.</Property>
-				<Property Name="TgtF_internalName" Type="Str">PIL v1.15 02/09/2022</Property>
+				<Property Name="TgtF_internalName" Type="Str">PIL v1.15 05/09/2022</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2022 IRAP</Property>
 				<Property Name="TgtF_productName" Type="Str">PIL</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{ED0BDDF1-E310-4993-833A-C5113E10FBB6}</Property>
