@@ -2,8 +2,8 @@
 <GXML_Root>
   <XML_Version type='Version'>1.5</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PIRENEA\DATA\2025\data_2025_07_09</Day_Path>
-    <Spectrum_Name type='String'>P1_2025_07_09_001.A00</Spectrum_Name>
+    <Day_Path type='Path'>D:\PIRENEA\DATA\2025\data_2025_07_28</Day_Path>
+    <Spectrum_Name type='String'>P1_2025_07_28_003.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
@@ -11,7 +11,7 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>28/07/2025 16:46:15.844</Date>
+    <Date type='String'>30/07/2025 18:54:34.881</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>Test ions to delete.
 Reference Sequence for Coronene.
