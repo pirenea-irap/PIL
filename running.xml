@@ -2,21 +2,18 @@
 <GXML_Root>
   <XML_Version type='Version'>1.5</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PIRENEA\DATA\2025\data_2025_07_28</Day_Path>
-    <Spectrum_Name type='String'>P1_2025_07_28_003.A00</Spectrum_Name>
+    <Day_Path type='Path'>D:\PILAB\DATA\2020\data_2020_10_13</Day_Path>
+    <Spectrum_Name type='String'>P2_2020_10_13_008.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
     <Quality_Flag type='String'>Optimal</Quality_Flag>
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
-    <Setup type='String'>PIRENEA</Setup>
-    <Date type='String'>30/07/2025 18:54:34.881</Date>
+    <Setup type='String'>PILAB</Setup>
+    <Date type='String'>31/07/2025 18:33:00.971</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test ions to delete.
-Reference Sequence for Coronene.
-
-</Comment>
+    <Comment type='String'>Test Ions Refill 1 + RF Guides On + RF Trap ON + 3 accums</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -28,7 +25,7 @@ Reference Sequence for Coronene.
       <Name>Other</Name>
     </Species>
     <Laser_1 mems='4'>
-      <Used type='Bool'>TRUE</Used>
+      <Used type='Bool'>FALSE</Used>
       <Name type='String'>Ablation Surelite I</Name>
       <Wavelength type='DBL'>266</Wavelength>
       <Energy type='DBL'>25</Energy>
@@ -158,30 +155,59 @@ Reference Sequence for Coronene.
     <Ions_Refill_ON type='Bool'>FALSE</Ions_Refill_ON>
     <Number_of_Ions_Refills type='I32'>1</Number_of_Ions_Refills>
   </TRAPPING_Inputs>
+  <RF_TRAPPING_Inputs mems='7'>
+    <Init_Values dim='[4]' type='DBL'>
+      <Numeric>0</Numeric>
+      <Numeric>1</Numeric>
+      <Numeric>1</Numeric>
+      <Numeric>0</Numeric>
+    </Init_Values>
+    <Opening_Values dim='[4]' type='DBL'>
+      <Numeric>0</Numeric>
+      <Numeric>-4</Numeric>
+      <Numeric>1</Numeric>
+      <Numeric>0</Numeric>
+    </Opening_Values>
+    <Trapping_Values dim='[4]' type='DBL'>
+      <Numeric>0</Numeric>
+      <Numeric>1</Numeric>
+      <Numeric>1</Numeric>
+      <Numeric>0</Numeric>
+    </Trapping_Values>
+    <Emptying_Values dim='[4]' type='DBL'>
+      <Numeric>0</Numeric>
+      <Numeric>1</Numeric>
+      <Numeric>-7</Numeric>
+      <Numeric>0</Numeric>
+    </Emptying_Values>
+    <RF_Trap_ON type='Bool'>TRUE</RF_Trap_ON>
+    <RF_Accums type='I32'>1</RF_Accums>
+    <Number_of_Voltages type='I32'>4</Number_of_Voltages>
+  </RF_TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
     <Number_of_Excitations type='I32'>1</Number_of_Excitations>
-    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p5f150p00to550p00a70d1200fs20end script</Script_Text>
+    <Script_Text type='String'>script  excit1wfm    wait until scriptTrigger0    generate E1Swift0p8f600p00to1200p00a100d1200fs20end script</Script_Text>
     <Table_of_Waveforms dim='[1]' type='String'>
-      <String>E1Swift0p5f150p00to550p00a70d1200fs20</String>
+      <String>E1Swift0p8f600p00to1200p00a100d1200fs20</String>
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>750000</Record_Length>
-    <Sample_Rate type='DBL'>5000000</Sample_Rate>
+    <Record_Length type='I32'>5000000</Record_Length>
+    <Sample_Rate type='DBL'>2.5E+7</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
-    <Vertical_Range type='DBL'>0.4</Vertical_Range>
-    <Acquisition_Duration type='DBL'>150</Acquisition_Duration>
+    <Vertical_Range type='DBL'>4</Vertical_Range>
+    <Acquisition_Duration type='DBL'>200</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
+    <Number_of_Accumulations type='I16'>3</Number_of_Accumulations>
     <Table_of_Waveforms dim='[12]' type='String'>
-      <String>AutLaserOn</String>
-      <String>AutLaserOnFilterOff</String>
-      <String>AutLaserOnFilterOffTrapStart</String>
-      <String>AutLaserOnFilterOffTrapStop</String>
-      <String>AutLaserOnFilterOn</String>
-      <String>AutLaserOff</String>
+      <String>GuidesOn</String>
+      <String>FilterOffGuidesOn</String>
+      <String>FilterOffGuidesOnTrapStart</String>
+      <String>FilterOffGuidesOnTrapStop</String>
+      <String>FilterOnGuidesOn</String>
+      <String>GuidesOff</String>
       <String>Excit</String>
       <String>Acq</String>
       <String>FilterOff</String>
@@ -189,24 +215,26 @@ Reference Sequence for Coronene.
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script ReferenceCoronene
-   wait until scriptTrigger0 
-   wait 949940
-   generate AutLaserOn
-   wait 49000
-   generate AutLaserOnFilterOff
-   wait 1000
-   wait 400
-   generate AutLaserOnFilterOffTrapStart
-   wait 300
-   generate AutLaserOnFilterOffTrapStop
-   wait 2000
-   generate AutLaserOnFilterOn
-   wait 47300
-   generate AutLaserOff
-   wait 10000
+    <Script_Text type='String'>script PilabRefill1GuidesOnRetrig
+   wait until scriptTrigger0
+   generate GuidesOn
+   repeat 1
+      wait 90000
+      generate FilterOffGuidesOn
+      wait 1000
+      wait until scriptTrigger0
+      wait 370
+      generate FilterOffGuidesOnTrapStart
+      wait 300
+      generate FilterOffGuidesOnTrapStop
+      wait 2000 
+      generate FilterOnGuidesOn
+      wait 1000
+  end repeat
+   generate GuidesOff
+   wait 5000
    generate Excit
-   wait 100
+   wait 2
    generate Acq
    wait 1000000
    generate FilterOff
@@ -227,19 +255,19 @@ end script
   <SOFTWARE_Inputs mems='16'>
     <Application_Directory type='Path'>D:\S.O.F.T.S\LABVIEW\PIL</Application_Directory>
     <Software_Version type='String'>24.3.3f3</Software_Version>
-    <Data_Path type='Path'>D:\PIRENEA\DATA</Data_Path>
-    <XML_Path type='Path'>D:\PIRENEA\DATA</XML_Path>
+    <Data_Path type='Path'>D:\PILAB\DATA</Data_Path>
+    <XML_Path type='Path'>D:\PILAB\DATA</XML_Path>
     <XML_File_Filter type='String'>*.xml</XML_File_Filter>
-    <XML_Saved_Path type='Path'>D:\PIRENEA\SAVED_XML</XML_Saved_Path>
-    <Excit_Scripts_Path type='Path'>D:\PIRENEA\TECHNICAL\EXCIT_SCRIPTS</Excit_Scripts_Path>
+    <XML_Saved_Path type='Path'>D:\PILAB\SAVED_XML</XML_Saved_Path>
+    <Excit_Scripts_Path type='Path'>D:\PILAB\TECHNICAL\EXCIT_SCRIPTS</Excit_Scripts_Path>
     <Excit_Scripts_File_Filter type='String'>*.txt</Excit_Scripts_File_Filter>
-    <Excit_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\EXCIT_WFMS</Excit_Waveforms_Path>
+    <Excit_Waveforms_Path type='Path'>D:\PILAB\TECHNICAL\EXCIT_WFMS</Excit_Waveforms_Path>
     <Excit_Waveforms_File_Filter type='String'>*.bin</Excit_Waveforms_File_Filter>
-    <Timing_Scripts_Path type='Path'>D:\PIRENEA\TECHNICAL\TIMING_SCRIPTS</Timing_Scripts_Path>
+    <Timing_Scripts_Path type='Path'>D:\PILAB\TECHNICAL\TIMING_SCRIPTS</Timing_Scripts_Path>
     <Timing_Scripts_File_Filter type='String'>*.txt</Timing_Scripts_File_Filter>
-    <Timing_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\TIMING_WFMS</Timing_Waveforms_Path>
+    <Timing_Waveforms_Path type='Path'>D:\PILAB\TECHNICAL\TIMING_WFMS</Timing_Waveforms_Path>
     <Timing_Waveforms_File_Filter type='String'>*.bin</Timing_Waveforms_File_Filter>
-    <Trapping_Waveforms_Path type='Path'>D:\PIRENEA\TECHNICAL\TRAPPING_WFMS</Trapping_Waveforms_Path>
+    <Trapping_Waveforms_Path type='Path'>D:\PILAB\TECHNICAL\TRAPPING_WFMS</Trapping_Waveforms_Path>
     <Trapping_Waveforms_File_Filter type='String'>*.bin</Trapping_Waveforms_File_Filter>
   </SOFTWARE_Inputs>
   <AO_6711_Inputs mems='5'>
@@ -285,11 +313,11 @@ end script
       <String>Excit1</String>
       <String>E1</String>
       <String>Swift</String>
-      <String>0.5</String>
+      <String>0.8</String>
       <String>1200</String>
-      <String>70</String>
-      <String>150.0</String>
-      <String>550.0</String>
+      <String>100</String>
+      <String>600.00</String>
+      <String>1200.00</String>
       <String>0</String>
       <String>0</String>
       <String>0</String>
