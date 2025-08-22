@@ -2,8 +2,8 @@
 <GXML_Root>
   <XML_Version type='Version'>1.5</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PILAB\DATA\2020\data_2020_10_13</Day_Path>
-    <Spectrum_Name type='String'>P2_2020_10_13_008.A00</Spectrum_Name>
+    <Day_Path type='Path'>D:\PILAB\DATA\2020\data_2020_12_02</Day_Path>
+    <Spectrum_Name type='String'>P2_2020_12_02_008.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
@@ -11,9 +11,10 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>31/07/2025 18:33:00.971</Date>
+    <Date type='String'>21/08/2025 18:58:12.139</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Ions Refill 1 + RF Guides On + RF Trap ON + 3 accums</Comment>
+    <Comment type='String'>Test Ions Refill 5 + RF Guides On + HSDIO Retrig
+Gas1</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -152,8 +153,8 @@
       <String>Adiabatic_None_2_2_2000</String>
       <String>Adiabatic_RC_9_0_2000</String>
     </Adiabatic_Waveforms>
-    <Ions_Refill_ON type='Bool'>FALSE</Ions_Refill_ON>
-    <Number_of_Ions_Refills type='I32'>1</Number_of_Ions_Refills>
+    <Ions_Refill_ON type='Bool'>TRUE</Ions_Refill_ON>
+    <Number_of_Ions_Refills type='I32'>5</Number_of_Ions_Refills>
   </TRAPPING_Inputs>
   <RF_TRAPPING_Inputs mems='7'>
     <Init_Values dim='[4]' type='DBL'>
@@ -180,7 +181,7 @@
       <Numeric>-7</Numeric>
       <Numeric>0</Numeric>
     </Emptying_Values>
-    <RF_Trap_ON type='Bool'>TRUE</RF_Trap_ON>
+    <RF_Trap_ON type='Bool'>FALSE</RF_Trap_ON>
     <RF_Accums type='I32'>1</RF_Accums>
     <Number_of_Voltages type='I32'>4</Number_of_Voltages>
   </RF_TRAPPING_Inputs>
@@ -192,22 +193,23 @@
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>5000000</Record_Length>
-    <Sample_Rate type='DBL'>2.5E+7</Sample_Rate>
+    <Record_Length type='I32'>2000000</Record_Length>
+    <Sample_Rate type='DBL'>1E+7</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
     <Vertical_Range type='DBL'>4</Vertical_Range>
     <Acquisition_Duration type='DBL'>200</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
-    <Number_of_Accumulations type='I16'>3</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[12]' type='String'>
+    <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
+    <Table_of_Waveforms dim='[13]' type='String'>
       <String>GuidesOn</String>
       <String>FilterOffGuidesOn</String>
       <String>FilterOffGuidesOnTrapStart</String>
       <String>FilterOffGuidesOnTrapStop</String>
       <String>FilterOnGuidesOn</String>
-      <String>GuidesOff</String>
+      <String>FilterOn</String>
+      <String>Gas1On</String>
       <String>Excit</String>
       <String>Acq</String>
       <String>FilterOff</String>
@@ -215,10 +217,10 @@
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PilabRefill1GuidesOnRetrig
+    <Script_Text type='String'>script PilabRefill1GuidesOnRetrigGas1
    wait until scriptTrigger0
    generate GuidesOn
-   repeat 1
+   repeat 5
       wait 90000
       generate FilterOffGuidesOn
       wait 1000
@@ -231,8 +233,10 @@
       generate FilterOnGuidesOn
       wait 1000
   end repeat
-   generate GuidesOff
+   generate FilterOn
    wait 5000
+   generate Gas1On
+   wait 500000
    generate Excit
    wait 2
    generate Acq
