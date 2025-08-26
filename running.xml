@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>26/08/2025 10:00:37.010</Date>
+    <Date type='String'>26/08/2025 14:58:36.467</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Ions Refill 10 + RF Guides On + HSDIO Retrig
+    <Comment type='String'>Test Ions Refill 1 + RF Guides On + RF Trap ON
 Gas1</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
@@ -154,7 +154,7 @@ Gas1</Comment>
       <String>Adiabatic_RC_9_0_2000</String>
     </Adiabatic_Waveforms>
     <Ions_Refill_ON type='Bool'>TRUE</Ions_Refill_ON>
-    <Number_of_Ions_Refills type='I32'>10</Number_of_Ions_Refills>
+    <Number_of_Ions_Refills type='I32'>2</Number_of_Ions_Refills>
   </TRAPPING_Inputs>
   <RF_TRAPPING_Inputs mems='7'>
     <Init_Values dim='[4]' type='DBL'>
@@ -202,8 +202,15 @@ Gas1</Comment>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[13]' type='String'>
+    <Table_of_Waveforms dim='[20]' type='String'>
       <String>GuidesOn</String>
+      <String>FilterOffRF</String>
+      <String>FilterOffRFTrapStart</String>
+      <String>FilterOffRFTrapStop</String>
+      <String>FilterOn</String>
+      <String>FilterOffRF</String>
+      <String>FilterOffRFTrapStart</String>
+      <String>FilterOffRFTrapStop</String>
       <String>FilterOffGuidesOn</String>
       <String>FilterOffGuidesOnTrapStart</String>
       <String>FilterOffGuidesOnTrapStop</String>
@@ -220,7 +227,24 @@ Gas1</Comment>
     <Script_Text type='String'>script PilabRefill1GuidesOnRetrigGas1
    wait until scriptTrigger0
    generate GuidesOn
-   repeat 10
+   repeat 3
+      wait 90000
+      generate FilterOffRF
+      wait 1000
+      wait until scriptTrigger0
+      wait 370
+      generate FilterOffRFTrapStart
+      wait 300
+      generate FilterOffRFTrapStop
+      generate FilterOn 
+   end repeat
+   generate FilterOffRF
+   wait 370
+   generate FilterOffRFTrapStart
+   wait 300
+   generate FilterOffRFTrapStop
+   wait 500
+   repeat 2
       wait 90000
       generate FilterOffGuidesOn
       wait 1000
@@ -234,9 +258,9 @@ Gas1</Comment>
       wait 1000
   end repeat
    generate FilterOn
-   wait 5000
+   wait 1000
    generate Gas1On
-   wait 500000
+   wait 50000
    generate Excit
    wait 2
    generate Acq
