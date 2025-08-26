@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>21/08/2025 18:58:12.139</Date>
+    <Date type='String'>26/08/2025 10:00:37.010</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Ions Refill 5 + RF Guides On + HSDIO Retrig
+    <Comment type='String'>Test Ions Refill 10 + RF Guides On + HSDIO Retrig
 Gas1</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
@@ -154,7 +154,7 @@ Gas1</Comment>
       <String>Adiabatic_RC_9_0_2000</String>
     </Adiabatic_Waveforms>
     <Ions_Refill_ON type='Bool'>TRUE</Ions_Refill_ON>
-    <Number_of_Ions_Refills type='I32'>5</Number_of_Ions_Refills>
+    <Number_of_Ions_Refills type='I32'>10</Number_of_Ions_Refills>
   </TRAPPING_Inputs>
   <RF_TRAPPING_Inputs mems='7'>
     <Init_Values dim='[4]' type='DBL'>
@@ -220,7 +220,7 @@ Gas1</Comment>
     <Script_Text type='String'>script PilabRefill1GuidesOnRetrigGas1
    wait until scriptTrigger0
    generate GuidesOn
-   repeat 5
+   repeat 10
       wait 90000
       generate FilterOffGuidesOn
       wait 1000
