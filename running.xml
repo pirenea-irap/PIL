@@ -2,8 +2,8 @@
 <GXML_Root>
   <XML_Version type='Version'>1.5</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PILAB\DATA\2020\data_2020_12_02</Day_Path>
-    <Spectrum_Name type='String'>P2_2020_12_02_008.A00</Spectrum_Name>
+    <Day_Path type='Path'>D:\PILAB\DATA\2025\data_2025_08_27</Day_Path>
+    <Spectrum_Name type='String'>P2_2025_08_27_005.A00</Spectrum_Name>
     <Accumulated type='Bool'>FALSE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
@@ -11,10 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>26/08/2025 14:58:36.467</Date>
+    <Date type='String'>27/08/2025 18:04:08.040</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Ions Refill 1 + RF Guides On + RF Trap ON
-Gas1</Comment>
+    <Comment type='String'>Test Ions Refill 1 + RF Trap ON accum 1</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -154,7 +153,7 @@ Gas1</Comment>
       <String>Adiabatic_RC_9_0_2000</String>
     </Adiabatic_Waveforms>
     <Ions_Refill_ON type='Bool'>TRUE</Ions_Refill_ON>
-    <Number_of_Ions_Refills type='I32'>2</Number_of_Ions_Refills>
+    <Number_of_Ions_Refills type='I32'>1</Number_of_Ions_Refills>
   </TRAPPING_Inputs>
   <RF_TRAPPING_Inputs mems='7'>
     <Init_Values dim='[4]' type='DBL'>
@@ -181,7 +180,7 @@ Gas1</Comment>
       <Numeric>-7</Numeric>
       <Numeric>0</Numeric>
     </Emptying_Values>
-    <RF_Trap_ON type='Bool'>FALSE</RF_Trap_ON>
+    <RF_Trap_ON type='Bool'>TRUE</RF_Trap_ON>
     <RF_Accums type='I32'>1</RF_Accums>
     <Number_of_Voltages type='I32'>4</Number_of_Voltages>
   </RF_TRAPPING_Inputs>
@@ -202,15 +201,14 @@ Gas1</Comment>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[20]' type='String'>
+    <Table_of_Waveforms dim='[19]' type='String'>
       <String>GuidesOn</String>
-      <String>FilterOffRF</String>
-      <String>FilterOffRFTrapStart</String>
-      <String>FilterOffRFTrapStop</String>
+      <String>RFFilterOff</String>
+      <String>RFFilterOffTrapStart</String>
+      <String>RFFilterOffTrapStop</String>
       <String>FilterOn</String>
-      <String>FilterOffRF</String>
-      <String>FilterOffRFTrapStart</String>
-      <String>FilterOffRFTrapStop</String>
+      <String>RFFilterOffEmptyingStart</String>
+      <String>RFFilterOffEmptyingStop</String>
       <String>FilterOffGuidesOn</String>
       <String>FilterOffGuidesOnTrapStart</String>
       <String>FilterOffGuidesOnTrapStop</String>
@@ -224,31 +222,28 @@ Gas1</Comment>
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PilabRefill1GuidesOnRetrigGas1
+    <Script_Text type='String'>script PilabAccumRF1GuidesOff
    wait until scriptTrigger0
    generate GuidesOn
-   repeat 3
+   repeat 1
       wait 90000
-      generate FilterOffRF
+      generate RFFilterOff
       wait 1000
       wait until scriptTrigger0
       wait 370
-      generate FilterOffRFTrapStart
+      generate RFFilterOffTrapStart
       wait 300
-      generate FilterOffRFTrapStop
+      generate RFFilterOffTrapStop
       generate FilterOn 
    end repeat
-   generate FilterOffRF
-   wait 370
-   generate FilterOffRFTrapStart
-   wait 300
-   generate FilterOffRFTrapStop
-   wait 500
-   repeat 2
+   wait until scriptTrigger0
+   generate RFFilterOffEmptyingStart
+   wait 10000
+   generate RFFilterOffEmptyingStop
+   repeat 1
       wait 90000
       generate FilterOffGuidesOn
       wait 1000
-      wait until scriptTrigger0
       wait 370
       generate FilterOffGuidesOnTrapStart
       wait 300
@@ -264,11 +259,11 @@ Gas1</Comment>
    generate Excit
    wait 2
    generate Acq
-   wait 1000000
+   wait 10000
    generate FilterOff
    wait 1000
    generate FilterOffEmptyingStart
-   wait 1000000
+   wait 10000
    generate FilterOffEmptyingStop
    wait 2000
    generate Zeros
