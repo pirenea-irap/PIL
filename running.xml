@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>27/08/2025 18:04:08.040</Date>
+    <Date type='String'>27/08/2025 19:16:55.830</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Ions Refill 1 + RF Trap ON accum 1</Comment>
+    <Comment type='String'>Test Ions Refill 1 + RF Trap ON accum 50</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -176,12 +176,12 @@
     </Trapping_Values>
     <Emptying_Values dim='[4]' type='DBL'>
       <Numeric>0</Numeric>
-      <Numeric>1</Numeric>
+      <Numeric>4</Numeric>
       <Numeric>-7</Numeric>
       <Numeric>0</Numeric>
     </Emptying_Values>
     <RF_Trap_ON type='Bool'>TRUE</RF_Trap_ON>
-    <RF_Accums type='I32'>1</RF_Accums>
+    <RF_Accums type='I32'>50</RF_Accums>
     <Number_of_Voltages type='I32'>4</Number_of_Voltages>
   </RF_TRAPPING_Inputs>
   <EXCIT_Inputs mems='3'>
@@ -201,18 +201,16 @@
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[19]' type='String'>
-      <String>GuidesOn</String>
+    <Table_of_Waveforms dim='[17]' type='String'>
       <String>RFFilterOff</String>
       <String>RFFilterOffTrapStart</String>
       <String>RFFilterOffTrapStop</String>
       <String>FilterOn</String>
-      <String>RFFilterOffEmptyingStart</String>
-      <String>RFFilterOffEmptyingStop</String>
-      <String>FilterOffGuidesOn</String>
-      <String>FilterOffGuidesOnTrapStart</String>
-      <String>FilterOffGuidesOnTrapStop</String>
-      <String>FilterOnGuidesOn</String>
+      <String>RFFilterOffTrapFilterOff</String>
+      <String>RFFilterOffTrapFilterOffRFEmptyingStart</String>
+      <String>RFFilterOffTrapFilterOffRFEmptyingStop</String>
+      <String>FilterOffTrapStart</String>
+      <String>FilterOffTrapStop</String>
       <String>FilterOn</String>
       <String>Gas1On</String>
       <String>Excit</String>
@@ -224,8 +222,7 @@
     </Table_of_Waveforms>
     <Script_Text type='String'>script PilabAccumRF1GuidesOff
    wait until scriptTrigger0
-   generate GuidesOn
-   repeat 1
+   repeat 50
       wait 90000
       generate RFFilterOff
       wait 1000
@@ -236,22 +233,17 @@
       generate RFFilterOffTrapStop
       generate FilterOn 
    end repeat
+   wait 95000
+   generate RFFilterOffTrapFilterOff
    wait until scriptTrigger0
-   generate RFFilterOffEmptyingStart
-   wait 10000
-   generate RFFilterOffEmptyingStop
-   repeat 1
-      wait 90000
-      generate FilterOffGuidesOn
-      wait 1000
-      wait 370
-      generate FilterOffGuidesOnTrapStart
-      wait 300
-      generate FilterOffGuidesOnTrapStop
-      wait 2000 
-      generate FilterOnGuidesOn
-      wait 1000
-  end repeat
+   generate RFFilterOffTrapFilterOffRFEmptyingStart
+   wait 1000
+   generate RFFilterOffTrapFilterOffRFEmptyingStop
+   wait 1000
+   generate FilterOffTrapStart
+   wait 400
+   generate FilterOffTrapStop
+   wait 2000 
    generate FilterOn
    wait 1000
    generate Gas1On
