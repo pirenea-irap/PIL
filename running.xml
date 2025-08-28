@@ -11,7 +11,7 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>27/08/2025 19:16:55.830</Date>
+    <Date type='String'>28/08/2025 11:20:52.164</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
     <Comment type='String'>Test Ions Refill 1 + RF Trap ON accum 50</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
@@ -180,7 +180,7 @@
       <Numeric>-7</Numeric>
       <Numeric>0</Numeric>
     </Emptying_Values>
-    <RF_Trap_ON type='Bool'>TRUE</RF_Trap_ON>
+    <RF_Trap_ON type='Bool'>FALSE</RF_Trap_ON>
     <RF_Accums type='I32'>50</RF_Accums>
     <Number_of_Voltages type='I32'>4</Number_of_Voltages>
   </RF_TRAPPING_Inputs>
