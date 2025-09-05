@@ -11,9 +11,9 @@
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>04/09/2025 19:44:06.619</Date>
+    <Date type='String'>05/09/2025 10:38:20.303</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Ions Refill 10 + RF Guides On + RF trap Off</Comment>
+    <Comment type='String'>Test Ions Refill 1 + RF Guides On + RF trap Off</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -152,7 +152,7 @@
       <String>Adiabatic_None_2_2_2000</String>
       <String>Adiabatic_RC_9_0_2000</String>
     </Adiabatic_Waveforms>
-    <Ions_Refill_ON type='Bool'>FALSE</Ions_Refill_ON>
+    <Ions_Refill_ON type='Bool'>TRUE</Ions_Refill_ON>
     <Number_of_Ions_Refills type='I32'>1</Number_of_Ions_Refills>
   </TRAPPING_Inputs>
   <RF_TRAPPING_Inputs mems='7'>
@@ -201,7 +201,7 @@
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
     <Number_of_Accumulations type='I16'>1</Number_of_Accumulations>
-    <Table_of_Waveforms dim='[20]' type='String'>
+    <Table_of_Waveforms dim='[12]' type='String'>
       <String>GuidesOn</String>
       <String>FilterOffGuidesOn</String>
       <String>FilterOffGuidesOnTrapStart</String>
@@ -210,20 +210,12 @@
       <String>GuidesOff</String>
       <String>Excit</String>
       <String>Acq</String>
-      <String>Laser1On</String>
-      <String>Laser2On</String>
-      <String>Laser3On</String>
-      <String>Laser4On</String>
-      <String>Lamp5On</String>
-      <String>Gas4On</String>
-      <String>Gas5On</String>
-      <String>Gas6On</String>
       <String>FilterOff</String>
       <String>FilterOffEmptyingStart</String>
       <String>FilterOffEmptyingStop</String>
       <String>Zeros</String>
     </Table_of_Waveforms>
-    <Script_Text type='String'>script PilabTest5lasers3GasTriggers
+    <Script_Text type='String'>script PilabNoRFNoRefillGuidesOn
    wait until scriptTrigger0
    generate GuidesOn
    repeat 1
@@ -234,31 +226,15 @@
       generate FilterOffGuidesOnTrapStart
       wait 300
       generate FilterOffGuidesOnTrapStop
-      wait 1000
+      wait 2000 
       generate FilterOnGuidesOn
   end repeat
    generate GuidesOff
-   wait 1000
+   wait 5000
    generate Excit
    wait 2
    generate Acq
-   wait 100
-   generate Laser1On
-   wait 100
-   generate Laser2On
-   wait 100
-   generate Laser3On
-   wait 100
-   generate Laser4On
-   wait 100
-   generate Lamp5On
-   wait 100
-   generate Gas4On
-   wait 100
-   generate Gas5On
-   wait 100
-   generate Gas6On
-   wait 100
+   wait 40000
    generate FilterOff
    wait 1000
    generate FilterOffEmptyingStart
