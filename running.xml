@@ -2,18 +2,20 @@
 <GXML_Root>
   <XML_Version type='Version'>1.5</XML_Version>
   <SPECTRUM mems='6'>
-    <Day_Path type='Path'>D:\PILAB\DATA\2025\data_2025_08_27</Day_Path>
-    <Spectrum_Name type='String'>P2_2025_08_27_005.A00</Spectrum_Name>
-    <Accumulated type='Bool'>FALSE</Accumulated>
+    <Day_Path type='Path'>D:\PILAB\DATA\2025\data_2025_09_17</Day_Path>
+    <Spectrum_Name type='String'>P2_2025_09_17_002.A00</Spectrum_Name>
+    <Accumulated type='Bool'>TRUE</Accumulated>
     <Stored_in_Database type='Bool'>FALSE</Stored_in_Database>
     <From_a_Set_of type='I16'>1</From_a_Set_of>
     <Quality_Flag type='String'>Optimal</Quality_Flag>
   </SPECTRUM>
   <EXPERIMENT_Inputs mems='20'>
     <Setup type='String'>PILAB</Setup>
-    <Date type='String'>08/09/2025 12:45:48.218</Date>
+    <Date type='String'>17/09/2025 11:17:47.551</Date>
     <User_Name type='String'>Odile COEUR-JOLY</User_Name>
-    <Comment type='String'>Test Ions Refill 1 + RF Trap ON accum 2</Comment>
+    <Comment type='String'>* Test Ions Refill = 1 (no Refill)
+* RF Trap OFF
+* Accum = 2</Comment>
     <Experiment_Procedures dim='[1]' type='String'>
       <Name>Other</Name>
     </Experiment_Procedures>
@@ -177,7 +179,7 @@
     <Emptying_Values dim='[4]' type='DBL'>
       <Numeric>0</Numeric>
       <Numeric>4</Numeric>
-      <Numeric>-7</Numeric>
+      <Numeric>-5</Numeric>
       <Numeric>0</Numeric>
     </Emptying_Values>
     <RF_Trap_ON type='Bool'>TRUE</RF_Trap_ON>
@@ -192,11 +194,11 @@
     </Table_of_Waveforms>
   </EXCIT_Inputs>
   <DATA_Inputs mems='5'>
-    <Record_Length type='I32'>500000</Record_Length>
+    <Record_Length type='I32'>2000000</Record_Length>
     <Sample_Rate type='DBL'>1E+7</Sample_Rate>
     <Data_Type type='U8'>0</Data_Type>
-    <Vertical_Range type='DBL'>4</Vertical_Range>
-    <Acquisition_Duration type='DBL'>50</Acquisition_Duration>
+    <Vertical_Range type='DBL'>1</Vertical_Range>
+    <Acquisition_Duration type='DBL'>200</Acquisition_Duration>
   </DATA_Inputs>
   <TIMING_Inputs mems='4'>
     <Number_of_Acquisitions_ type='I16'>1</Number_of_Acquisitions_>
@@ -209,8 +211,8 @@
       <String>RFFilterOffTrapFilterOff</String>
       <String>RFFilterOffTrapFilterOffRFEmptyingStart</String>
       <String>RFFilterOffTrapFilterOffRFEmptyingStop</String>
-      <String>FilterOffTrapStart</String>
-      <String>FilterOffTrapStop</String>
+      <String>RFFilterOffICRFilterOffICRTrapStart</String>
+      <String>RFFilterOffICRFilterOffICRTrapStop</String>
       <String>FilterOn</String>
       <String>Excit</String>
       <String>Acq</String>
@@ -222,37 +224,38 @@
     <Script_Text type='String'>script PilabAccumRF2
    wait until scriptTrigger0
    repeat 2
-      wait 97000
+      wait 95000
       generate RFFilterOff
-      wait 1000
+      wait 2000
       wait until scriptTrigger0
       wait 200
       generate RFFilterOffTrapStart
       wait 300
       generate RFFilterOffTrapStop
-      generate FilterOn 
+      wait 2000
+      generate FilterOn
    end repeat
-   wait 97000
+   wait 95000
    generate RFFilterOffTrapFilterOff
    wait until scriptTrigger0
    generate RFFilterOffTrapFilterOffRFEmptyingStart
    wait 1000
    generate RFFilterOffTrapFilterOffRFEmptyingStop
    wait 800
-   generate FilterOffTrapStart
-   wait 400
-   generate FilterOffTrapStop
+   generate RFFilterOffICRFilterOffICRTrapStart
+   wait 300
+   generate RFFilterOffICRFilterOffICRTrapStop
    wait 2000 
    generate FilterOn
-   wait 1000
+   wait 5000
    generate Excit
    wait 2
    generate Acq
-   wait 50000
+   wait 1000000
    generate FilterOff
-   wait 1000
+   wait 2000
    generate FilterOffEmptyingStart
-   wait 10000
+   wait 1000000
    generate FilterOffEmptyingStop
    wait 2000
    generate Zeros
@@ -290,7 +293,7 @@ end script
     <Counter type='Tag'>AO_6711/ctr0</Counter>
   </AO_6711_Inputs>
   <AO_6738_Inputs mems='5'>
-    <Physical_Channels type='Tag'>AO_6738/ao0:3</Physical_Channels>
+    <Physical_Channels type='Tag'>AO_6738/ao4:7</Physical_Channels>
     <Min_Voltage type='DBL'>-10</Min_Voltage>
     <Max_Voltage type='DBL'>10</Max_Voltage>
     <Trigger_Source type='Tag'>/AO_6738/PFI2</Trigger_Source>
